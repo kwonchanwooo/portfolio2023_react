@@ -15,7 +15,9 @@ footer {
 			left: 0;
 			transform: translateY(-50%);
 			@include red;
-
+			&:hover {
+				color: white;
+			}
 			i {
 				@include red;
 				&:hover {
@@ -29,7 +31,9 @@ footer {
 			right: 0;
 			transform: translateY(-50%);
 			@include red;
-
+			&:hover {
+				color: white;
+			}
 			i {
 				&:hover {
 					@include red;
