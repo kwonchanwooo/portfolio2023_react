@@ -1,0 +1,80 @@
+footer {
+	width: 100%;
+	padding-top: 100px;
+	margin-bottom: -100px;
+	height: 150px;
+	background: rgb(16, 16, 16);
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		position: relative;
+
+		.logo1 {
+			position: absolute;
+			bottom: 25px;
+			left: 0;
+			transform: translateY(-50%);
+			@include red;
+
+			i {
+				@include red;
+				&:hover {
+					color: white;
+				}
+			}
+		}
+		.logo2 {
+			position: absolute;
+			bottom: 25px;
+			right: 0;
+			transform: translateY(-50%);
+			@include red;
+
+			i {
+				&:hover {
+					@include red;
+				}
+			}
+		}
+		.second {
+			position: absolute;
+			left: 50%;
+			bottom: 25px;
+			transform: translate(-46%, -50%);
+			li {
+				float: left;
+				margin-right: 20px;
+				color: black;
+				font-family: 'inter';
+
+				a {
+					color: white;
+					&:hover {
+						@include red;
+					}
+				}
+			}
+		}
+		p {
+			position: relative;
+			// bottom: -50px;
+			text-align: center;
+			font: 12px 'inter';
+			color: #999;
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	footer {
+		.inner {
+			width: 100%;
+			.logo1 {
+				left: 40px;
+			}
+			.logo2 {
+				right: 40px;
+			}
+		}
+	}
+}

@@ -1,0 +1,73 @@
+header {
+	width: 100%;
+	background: rgb(16, 16, 16);
+	// position: fixed;
+	z-index: 5;
+	.inner {
+		width: 1180px;
+		height: 80px;
+		margin: 0 auto;
+		position: relative;
+		h1 {
+			position: absolute;
+			left: 0px;
+			top: 20px;
+			.fa-hotel {
+				width: 30px;
+			}
+			a {
+				width: 25px;
+				@include red;
+				&:hover {
+					color: white;
+				}
+				i {
+					@include red;
+				}
+			}
+		}
+		#gnb {
+			position: absolute;
+			right: 0;
+			top: 0;
+			li {
+				float: left;
+				a {
+					display: block;
+					padding: 30px 10px;
+					color: white;
+					font-family: 'inter';
+					&:hover {
+						@include red;
+					}
+				}
+			}
+		}
+		.fa-bars {
+			position: absolute;
+			top: 50%;
+			right: 30px;
+			transform: translateY(-50%);
+			width: 30px;
+			height: 30px;
+			color: white;
+			display: none;
+		}
+	}
+}
+@media screen and (max-width: $tablet) {
+	header {
+		.inner {
+			width: 100%;
+			h1 {
+				left: 40px;
+			}
+			#gnb {
+				display: none;
+			}
+			.fa-bars {
+				display: block;
+			}
+		}
+	}
+}
