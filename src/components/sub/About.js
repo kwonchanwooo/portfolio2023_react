@@ -1,10 +1,32 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import Layout from '../commoon/Layout';
 
 function About(props) {
+	const [Member, setMember] = useState([]);
+	useEffect(() => {
+		axios.get(`${process.env.PUBLIC_URL}/DB/member.json`).then((json) => {
+			setMember(json.data.members);
+		});
+	}, []);
+	useEffect(() => {
+		console.log(Member);
+	}, [Member]);
 	return (
 		<Layout name={'About'}>
-			<p>About</p>
+			{Member.map((el, index) => {
+				return (
+					<article key={index}>
+						<div className='inner'>
+							<div className='pic'>
+								<img src={`${process.env.PUBLIC_URL}/img/${el.pic}`} alt={el.name} />
+							</div>
+							<h3>{el.name}</h3>
+							<p>{el.position}</p>
+						</div>
+					</article>
+				);
+			})}
 		</Layout>
 	);
 }

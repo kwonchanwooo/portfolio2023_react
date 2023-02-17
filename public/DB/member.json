@@ -1,0 +1,44 @@
+{
+  "members": [
+    {
+      "name": "Ashlyn",
+      "position": "General Manager",
+      "pic": "dep1.jpg"
+    },
+    {
+      "name": "Larry",
+      "position": "Beverage Manager",
+      "pic": "dep2.jpg"
+    },
+    {
+      "name": "Tyshawn",
+      "position": "Food Manager",
+      "pic": "dep3.jpg"
+    },
+    {
+      "name": "Celeste",
+      "position": "Excutive Housekeeper",
+      "pic": "dep4.jpg"
+    },
+    {
+      "name": "Holly",
+      "position": "Front Office Manager",
+      "pic": "dep5.jpg"
+    },
+    {
+      "name": "Abram",
+      "position": "Waiter",
+      "pic": "dep6.jpg"
+    },
+    {
+      "name": "Dandre",
+      "position": "Front Desk Attendent",
+      "pic": "dep7.jpg"
+    },
+    {
+      "name": "James",
+      "position": "Revenue Manager",
+      "pic": "dep8.jpg"
+    }
+  ]
+}
