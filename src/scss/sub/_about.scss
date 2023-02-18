@@ -1,0 +1,145 @@
+.About {
+	width: 100%;
+	height: 1550px;
+	background: rgb(23, 23, 23);
+	.inner {
+		width: 1180px;
+
+		article {
+			float: left;
+			width: 280px;
+			height: 400px;
+			background: rgb(16, 16, 16);
+			margin-right: 20px;
+			margin-bottom: 20px;
+			&:nth-of-type(4) {
+				margin-right: 0px;
+			}
+			&:nth-of-type(8) {
+				margin-right: 0px;
+			}
+
+			.inner {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				margin: 0 auto;
+
+				.pic {
+					margin: 0 auto;
+					filter: grayscale(100);
+					img {
+						box-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
+						margin: 20px 0;
+						object-fit: cover;
+						width: 240px;
+						height: 240px;
+						background: #fff;
+						border-radius: 50%;
+					}
+				}
+				.txt {
+					color: #fff;
+					font-family: 'roboto';
+					text-align: center;
+					margin-top: 20px;
+					letter-spacing: 1px;
+					h3 {
+						font: 24px 'roboto';
+						@include red;
+						margin-top: -10px;
+					}
+					p {
+						font-size: 15px;
+						margin-top: 20px;
+						color: #999;
+					}
+				}
+			}
+
+			&:hover {
+				@include button;
+				.pic {
+					filter: grayscale(0);
+				}
+				h2 {
+					color: #fff;
+				}
+				p {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1179px) {
+	.lists {
+		.sub_visual {
+			height: 300px;
+		}
+		height: 1850px;
+		.inner {
+			width: 100%;
+			padding: 20px 20px;
+
+			.wrap {
+				width: 100%;
+				h1 {
+					font-size: 40px;
+				}
+				article {
+					width: 32%;
+					margin-right: 2%;
+					&:nth-of-type(3) {
+						margin-right: 0px;
+					}
+					&:nth-of-type(4) {
+						margin-right: 2%;
+					}
+					&:nth-of-type(5) {
+						margin-right: 2%;
+					}
+					&:nth-of-type(6) {
+						float: left;
+						margin-right: 0px;
+					}
+					.pic {
+						width: 25vw;
+						height: 25vw;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.lists {
+		.sub_visual {
+			height: 200px;
+		}
+		.inner {
+			.wrap {
+				article {
+					float: none;
+					height: 150px;
+					width: 100%;
+					display: flex;
+					flex-direction: row;
+					.pic {
+						width: 25vw;
+						margin: auto;
+					}
+					.txt {
+						width: 60%;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						margin-top: 0;
+					}
+				}
+			}
+		}
+	}
+}

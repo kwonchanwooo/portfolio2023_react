@@ -21,8 +21,10 @@ function About(props) {
 							<div className='pic'>
 								<img src={`${process.env.PUBLIC_URL}/img/${el.pic}`} alt={el.name} />
 							</div>
-							<h3>{el.name}</h3>
-							<p>{el.position}</p>
+							<div className='txt'>
+								<h3>{el.name}</h3>
+								<p>{el.position}</p>
+							</div>
 						</div>
 					</article>
 				);
