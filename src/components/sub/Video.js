@@ -1,8 +1,11 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Layout from '../commoon/Layout';
+import Modal from '../commoon/Modal';
 function Video(props) {
 	const [vids, setVids] = useState([]);
+	const [open, setOpen] = useState(false);
+	const [index, setIndex] = useState(0);
 
 	useEffect(() => {
 		const key = 'AIzaSyA-UYRzqSCi4U5kxVd_JZ2vPlyksDRJJiQ';
@@ -30,13 +33,30 @@ function Video(props) {
 								<p>{desc.length > 80 ? desc.substr(0, 80) + '...' : desc}</p>
 								<span>{date.split('T')[0]}</span>
 							</div>
-							<div className='pic'>
+							<div
+								className='pic'
+								onClick={() => {
+									setOpen(true);
+									setIndex(index);
+								}}
+							>
 								<img src={el.snippet.thumbnails.high.url} alt={el.snippet.title} />
 							</div>
 						</article>
 					);
 				})}
 			</Layout>
+
+			{open ? (
+				<Modal setOpen={setOpen}>
+					<iframe
+						title={vids[0].id}
+						src={`https://www.youtube.com/embed/${vids[index].snippet.resourceId.videoId}`}
+					></iframe>
+				</Modal>
+			) : (
+				''
+			)}
 		</>
 	);
 }
