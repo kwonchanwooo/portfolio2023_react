@@ -73,40 +73,35 @@
 	}
 }
 
-@media screen and (max-width: 1179px) {
-	.lists {
-		.sub_visual {
-			height: 300px;
-		}
+@media screen and (max-width: $tablet) {
+	.About {
 		height: 1850px;
 		.inner {
 			width: 100%;
 			padding: 20px 20px;
 
-			.wrap {
-				width: 100%;
-				h1 {
-					font-size: 40px;
+			article {
+				width: 32%;
+				margin-right: 2%;
+				&:nth-of-type(3) {
+					margin-right: 0px;
 				}
-				article {
-					width: 32%;
+				&:nth-of-type(4) {
 					margin-right: 2%;
-					&:nth-of-type(3) {
-						margin-right: 0px;
-					}
-					&:nth-of-type(4) {
-						margin-right: 2%;
-					}
-					&:nth-of-type(5) {
-						margin-right: 2%;
-					}
-					&:nth-of-type(6) {
-						float: left;
-						margin-right: 0px;
-					}
+				}
+				&:nth-of-type(5) {
+					margin-right: 2%;
+				}
+				&:nth-of-type(6) {
+					float: left;
+					margin-right: 0px;
+				}
+				.inner {
 					.pic {
-						width: 25vw;
-						height: 25vw;
+						img {
+							width: 25vw;
+							height: 25vw;
+						}
 					}
 				}
 			}
@@ -115,21 +110,26 @@
 }
 
 @media screen and (max-width: $mobile) {
-	.lists {
-		.sub_visual {
-			height: 200px;
-		}
+	.About {
 		.inner {
-			.wrap {
-				article {
-					float: none;
-					height: 150px;
-					width: 100%;
+			min-height: auto;
+			article {
+				height: 150px;
+				width: 100%;
+
+				.inner {
+					height: 100%;
+
 					display: flex;
 					flex-direction: row;
 					.pic {
-						width: 25vw;
-						margin: auto;
+						height: 100%;
+						margin: 0 auto;
+						img {
+							height: 100%;
+							width: 100%;
+							margin: 0 auto;
+						}
 					}
 					.txt {
 						width: 60%;
