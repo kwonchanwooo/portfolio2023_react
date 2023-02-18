@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Layout from '../commoon/Layout';
 import Modal from '../commoon/Modal';
+
 function Video(props) {
 	const [vids, setVids] = useState([]);
 	const [open, setOpen] = useState(false);
@@ -28,11 +29,6 @@ function Video(props) {
 
 					return (
 						<article key={el.id}>
-							<h3>{tit.length > 26 ? tit.substr(0, 26) + '...' : tit}</h3>
-							<div className='txt'>
-								<p>{desc.length > 80 ? desc.substr(0, 80) + '...' : desc}</p>
-								<span>{date.split('T')[0]}</span>
-							</div>
 							<div
 								className='pic'
 								onClick={() => {
@@ -41,6 +37,11 @@ function Video(props) {
 								}}
 							>
 								<img src={el.snippet.thumbnails.high.url} alt={el.snippet.title} />
+								<div className='txt'>
+									<h3>{tit.length > 26 ? tit.substr(0, 26) + '...' : tit}</h3>
+									<p>{desc.length > 80 ? desc.substr(0, 80) + '...' : desc}</p>
+									<span>{date.split('T')[0]}</span>
+								</div>
 							</div>
 						</article>
 					);

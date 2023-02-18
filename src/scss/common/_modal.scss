@@ -20,11 +20,18 @@
 		}
 	}
 	.close {
-		font: bold 14px/1 'arial';
-		@include red;
 		position: absolute;
-		top: 4vh;
-		right: 5vw;
+		font-size: 40px;
+		top: 50px;
+		right: 50px;
 		cursor: pointer;
+		z-index: 999;
+		@include red;
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.modal {
+		padding: 20vw 10vw;
 	}
 }
