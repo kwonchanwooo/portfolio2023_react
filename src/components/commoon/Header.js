@@ -29,6 +29,11 @@ function Header(props) {
 						</NavLink>
 					</li>
 					<li>
+						<NavLink to='/rooms' activeStyle={active}>
+							Rooms
+						</NavLink>
+					</li>
+					<li>
 						<NavLink to='/facilities' activeStyle={active}>
 							Facilities
 						</NavLink>
