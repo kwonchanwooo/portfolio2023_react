@@ -1,7 +1,7 @@
 header {
 	width: 100%;
 	background: rgb(16, 16, 16);
-	// position: fixed;
+	position: fixed;
 	z-index: 5;
 	.inner {
 		width: 1180px;
@@ -19,7 +19,7 @@ header {
 				width: 25px;
 				color: white;
 				&:hover {
-					color: white;
+					@include red;
 				}
 				i {
 					@include red;
