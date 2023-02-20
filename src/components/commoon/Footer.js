@@ -28,7 +28,13 @@ function Footer(props) {
 					<br />
 				</ul>
 
-				<a href='#' className='logo2'>
+				<a
+					href=''
+					className='logo2'
+					onClick={() => {
+						window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+					}}
+				>
 					<FontAwesomeIcon icon={faArrowUp} />
 				</a>
 
