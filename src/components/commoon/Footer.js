@@ -5,7 +5,7 @@ function Footer(props) {
 	return (
 		<footer>
 			<div className='inner'>
-				<a href='' className='logo1'>
+				<a href='/' className='logo1'>
 					<FontAwesomeIcon icon={faHotel} />
 				</a>
 
@@ -29,7 +29,7 @@ function Footer(props) {
 				</ul>
 
 				<a
-					href=''
+					href='/'
 					className='logo2'
 					onClick={() => {
 						window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });

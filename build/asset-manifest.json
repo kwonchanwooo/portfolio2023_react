@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio2023_react/static/css/main.0bf43fb6.css",
+    "main.css": "/portfolio2023_react/static/css/main.ad7a139b.css",
     "main.js": "/portfolio2023_react/static/js/main.31222a8d.js",
     "static/media/IMG_0116.PNG": "/portfolio2023_react/static/media/IMG_0116.6d6f7de57627e09face6.PNG",
     "static/media/restaurant.jpg": "/portfolio2023_react/static/media/restaurant.7ce73b31332a64d01f96.jpg",
@@ -8,11 +8,11 @@
     "static/media/swim.jpg": "/portfolio2023_react/static/media/swim.9d1e3903a4a56ef56945.jpg",
     "static/media/banquet.jpg": "/portfolio2023_react/static/media/banquet.99576afe0415d0f1e561.jpg",
     "index.html": "/portfolio2023_react/index.html",
-    "main.0bf43fb6.css.map": "/portfolio2023_react/static/css/main.0bf43fb6.css.map",
+    "main.ad7a139b.css.map": "/portfolio2023_react/static/css/main.ad7a139b.css.map",
     "main.31222a8d.js.map": "/portfolio2023_react/static/js/main.31222a8d.js.map"
   },
   "entrypoints": [
-    "static/css/main.0bf43fb6.css",
+    "static/css/main.ad7a139b.css",
     "static/js/main.31222a8d.js"
   ]
 }

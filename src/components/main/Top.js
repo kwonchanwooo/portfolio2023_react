@@ -9,10 +9,10 @@ import React from 'react';
 function Top(props) {
 	return (
 		<section id='top'>
-			<div class='inner'>
-				<div class='wrap'>
+			<div className='inner'>
+				<div className='wrap'>
 					<article>
-						<div class='pic'>
+						<div className='pic'>
 							<FontAwesomeIcon icon={faCouch} />
 						</div>
 						<h1>HOME</h1>
@@ -23,7 +23,7 @@ function Top(props) {
 					</article>
 
 					<article>
-						<div class='pic'>
+						<div className='pic'>
 							<FontAwesomeIcon icon={faFaceSmile} />
 						</div>
 						<h1>SMILE</h1>
@@ -34,7 +34,7 @@ function Top(props) {
 					</article>
 
 					<article>
-						<div class='pic'>
+						<div className='pic'>
 							<FontAwesomeIcon icon={faHandSparkles} />
 						</div>
 						<h1>CLEAN</h1>

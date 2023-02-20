@@ -3,8 +3,8 @@ import React from 'react';
 function Banner(props) {
 	return (
 		<section id='banner'>
-			<div class='inner'>
-				<div class='wrap'>
+			<div className='inner'>
+				<div className='wrap'>
 					<h1>
 						Let's work together on
 						<br /> your next projcet

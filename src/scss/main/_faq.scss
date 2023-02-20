@@ -45,7 +45,7 @@
 					@include red;
 					opacity: 0.6;
 				}
-				&:checked ~ .content {
+				&:checked ~ .contents {
 					max-height: 100vh;
 				}
 				&:checked ~ label h3 {
@@ -88,7 +88,7 @@
 					padding-left: 20px;
 				}
 			}
-			.content {
+			.contents {
 				max-height: 0;
 				transition: 1s;
 				overflow: hidden;

@@ -3,16 +3,16 @@ import React from 'react';
 function Faq(props) {
 	return (
 		<section id='faq'>
-			<div class='container'>
+			<div className='container'>
 				<h1> FREQEUNTLY ASKED QUESTIONS</h1>
 
-				<div class='question'>
+				<div className='question'>
 					<input type='radio' name='acc' id='acc1' />
 					<label for='acc1'>
 						<h2>01</h2>
 						<h3>How do I apply?</h3>
 					</label>
-					<div class='content'>
+					<div className='contents'>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum accusamus dolorem
 							quae vel amet eligendi? Itaque necessitatibus eligendi, soluta debitis asperiores
@@ -23,13 +23,13 @@ function Faq(props) {
 						</p>
 					</div>
 				</div>
-				<div class='question'>
+				<div className='question'>
 					<input type='radio' name='acc' id='acc2' />
 					<label for='acc2'>
 						<h2>02</h2>
 						<h3>How do I apply?</h3>
 					</label>
-					<div class='content'>
+					<div className='contents'>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum accusamus dolorem
 							quae vel amet eligendi? Itaque necessitatibus eligendi, soluta debitis asperiores
@@ -37,13 +37,13 @@ function Faq(props) {
 						</p>
 					</div>
 				</div>
-				<div class='question'>
+				<div className='question'>
 					<input type='radio' name='acc' id='acc3' />
 					<label for='acc3'>
 						<h2>03</h2>
 						<h3>How do I apply?</h3>
 					</label>
-					<div class='content'>
+					<div className='contents'>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum accusamus dolorem
 							quae vel amet eligendi? Itaque necessitatibus eligendi, soluta debitis asperiores
@@ -56,13 +56,13 @@ function Faq(props) {
 						</p>
 					</div>
 				</div>
-				<div class='question'>
+				<div className='question'>
 					<input type='radio' name='acc' id='acc4' />
 					<label for='acc4'>
 						<h2>04</h2>
 						<h3>How do I apply?</h3>
 					</label>
-					<div class='content'>
+					<div className='contents'>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 					</div>
 				</div>

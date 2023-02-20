@@ -3,11 +3,11 @@ import React from 'react';
 function Visual(props) {
 	return (
 		<figure id='visual'>
-			<div class='inner'>
-				<div class='wrap'>
+			<div className='inner'>
+				<div className='wrap'>
 					<article>
-						<div class='pic'></div>
-						<div class='hello'>
+						<div className='pic'></div>
+						<div className='hello'>
 							<h2>Hello in Portfolio</h2>
 
 							<h1>The Cozy Hotel</h1>

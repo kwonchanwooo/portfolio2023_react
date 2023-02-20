@@ -4,8 +4,8 @@ import React from 'react';
 function Rank(props) {
 	return (
 		<section id='rank'>
-			<div class='inner'>
-				<div class='wrap'>
+			<div className='inner'>
+				<div className='wrap'>
 					<article>
 						<h1>
 							<FontAwesomeIcon icon={faStar} />
