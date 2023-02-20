@@ -17,7 +17,7 @@ header {
 			}
 			a {
 				width: 25px;
-				@include red;
+				color: white;
 				&:hover {
 					color: white;
 				}

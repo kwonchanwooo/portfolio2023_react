@@ -14,6 +14,7 @@ import Community from './components/sub/Community';
 import Facilities from './components/sub/Facilities';
 import Join from './components/sub/Join';
 import Location from './components/sub/Location';
+import Rooms from './components/sub/Rooms';
 import Video from './components/sub/Video';
 
 import './scss/style.scss';
@@ -48,6 +49,10 @@ function App() {
 
 			<Route path='/location'>
 				<Location />
+			</Route>
+
+			<Route path='/rooms'>
+				<Rooms />
 			</Route>
 
 			<Route path='/facilities'>
