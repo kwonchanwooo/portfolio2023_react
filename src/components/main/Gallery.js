@@ -1,6 +1,7 @@
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { Link } from 'react-router-dom';
 function Gallery(props) {
 	return (
 		<section id='gallery'>
@@ -8,7 +9,7 @@ function Gallery(props) {
 				<div className='wrap'>
 					<h1>HOTEL FACILITIES</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, explicabo.</p>
-					<a href='facilities.html'>VIEW ALL</a>
+					<Link to='/facilities'>VIEW ALL</Link>
 					<article>
 						<div className='pic'></div>
 						<h2>BANQUET</h2>
@@ -19,23 +20,23 @@ function Gallery(props) {
 					<article>
 						<div className='pic'></div>
 						<h2>RESTAURANT</h2>
-						<a href='banquet.html'>
+						<Link href='/facilities'>
 							VIEW MORE <FontAwesomeIcon icon={faCaretRight} />
-						</a>
+						</Link>
 					</article>
 					<article>
 						<div className='pic'></div>
 						<h2>BAR</h2>
-						<a href='bar.html'>
+						<Link href='/facilities'>
 							VIEW MORE <FontAwesomeIcon icon={faCaretRight} />
-						</a>
+						</Link>
 					</article>
 					<article>
 						<div className='pic'></div>
 						<h2>SPA</h2>
-						<a href='spa.html'>
+						<Link href='/facilities'>
 							VIEW MORE <FontAwesomeIcon icon={faCaretRight} />
-						</a>
+						</Link>
 					</article>
 				</div>
 			</div>

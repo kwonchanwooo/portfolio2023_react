@@ -31,7 +31,8 @@ function Footer(props) {
 				<a
 					href='/'
 					className='logo2'
-					onClick={() => {
+					onClick={(e) => {
+						e.preventDefault();
 						window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 					}}
 				>
