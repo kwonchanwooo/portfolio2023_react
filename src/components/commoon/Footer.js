@@ -11,17 +11,17 @@ function Footer(props) {
 
 				<ul className='second'>
 					<li>
-						<a href='https://www.instagram.com' target='_blank'>
+						<a href='https://www.instagram.com' target='noopener'>
 							instagram
 						</a>
 					</li>
 					<li>
-						<a href='https://www.twitter.com' target='_blank'>
+						<a href='https://www.twitter.com' target='noopener'>
 							twitter
 						</a>
 					</li>
 					<li>
-						<a href='https://www.facebook.com' target='_blank'>
+						<a href='https://www.facebook.com' target='noopener'>
 							facebook
 						</a>
 					</li>
