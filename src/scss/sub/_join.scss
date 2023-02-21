@@ -84,8 +84,10 @@
 							background: rgba(0, 0, 0, 0.03);
 							border: 1px solid #aaa;
 						}
-						p {
-							font: 11px/1 '맑은 고딕';
+						.err {
+							display: block;
+							width: 100%;
+							font: 11px/0.5 '맑은 고딕';
 							@include red;
 							margin-top: 5px;
 						}

@@ -1,10 +1,80 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import Layout from '../commoon/Layout';
 
 function Join(props) {
+	const history = useHistory();
+	const initVal = {
+		userid: '',
+		pwd1: '',
+		pwd2: '',
+		email: '',
+		country: '',
+		adr: '',
+		zip: '',
+		gender: false,
+		comments: '',
+	};
+
+	const [val, setVal] = useState(initVal);
+	const [err, setErr] = useState({});
+
+	const check = (value) => {
+		const errs = {};
+		const eng = /[a-zA-Z]/;
+		const num = /[0-9]/;
+		const spc = /[~!@#$%^&*)]/;
+
+		if (value.userid.length < 7 || !eng.test(value.userid) || !num.test(value.userid)) {
+			errs.userid = '아이디를 7글자 이상, 영어, 숫자를 포함하여 입력하세요';
+		}
+
+		if (
+			value.pwd1.length < 10 ||
+			!eng.test(value.pwd1) ||
+			!num.test(value.pwd1) ||
+			!spc.test(value.pwd1)
+		) {
+			errs.pwd1 = '비밀번호는 10글자 이상, 영문, 숫자, 특수문자를 모두 포함하세요';
+		}
+		if (value.pwd1 !== value.pwd2 || !value.pwd2) {
+			errs.pwd2 = '두개의 비밀번호를 동일하게 입력하세요';
+		}
+
+		if (value.email.length < 8 || !/@/.test(value.email)) {
+			errs.email = '이메일은 8글자 이상, @를 포함하세요';
+		}
+
+		if (!value.gender) {
+			errs.gender = '성별을 선택하세요.';
+		}
+		if (value.country === '') {
+			errs.edu = '국적을 선택하세요.';
+		}
+		if (value.adr.length < 10) {
+			errs.adr = '주소를 정확히 기입하세요';
+		}
+		if (value.zip.length > 4 || value.zip.length < 6) {
+			errs.zip = '우편번호 5글자를 입력해주세요';
+		}
+		if (value.comments.length < 20) {
+			errs.comments = '남기는 말은 20글자 이상 입력하세요.';
+		}
+
+		return errs;
+	};
+
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		setVal({ ...val, [name]: value });
+	};
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		setErr(check(val));
+	};
 	return (
 		<Layout name={'Join'}>
-			<form>
+			<form onSubmit={handleSubmit}>
 				<fieldset>
 					<legend className='hidden'>회원가입 폼 양식</legend>
 					<table>
@@ -17,7 +87,15 @@ function Join(props) {
 									<label htmlFor='userid'>User ID</label>
 								</th>
 								<td>
-									<input type='text' name='userid' id='userid' placeholder='아이디를 입력하세요' />
+									<input
+										type='text'
+										name='userid'
+										id='userid'
+										placeholder='아이디를 입력하세요'
+										onChange={handleChange}
+										value={val.userid}
+									/>
+									<span className='err'>{err.userid}</span>
 								</td>
 							</tr>
 
@@ -31,7 +109,10 @@ function Join(props) {
 										name='pwd1'
 										id='pwd1'
 										placeholder='비밀번호를 입력하세요.'
+										onChange={handleChange}
+										value={val.pwd1}
 									/>
+									<span className='err'>{err.pwd1}</span>
 								</td>
 							</tr>
 							<tr>
@@ -44,7 +125,10 @@ function Join(props) {
 										name='pwd2'
 										id='pwd2'
 										placeholder='비밀번호를 재 입력하세요'
+										onChange={handleChange}
+										value={val.pwd2}
 									/>
+									<span className='err'>{err.pwd2}</span>
 								</td>
 							</tr>
 							<tr>
@@ -57,7 +141,10 @@ function Join(props) {
 										name='email'
 										id='email'
 										placeholder='이메일주소를 입력하세요'
+										onChange={handleChange}
+										value={val.email}
 									/>
+									<span className='err'>{err.email}</span>
 								</td>
 							</tr>
 							<tr>
@@ -79,13 +166,21 @@ function Join(props) {
 									<label htmlFor='adr'></label> Address
 								</th>
 								<td>
-									<input type='text' name='adr' id='adr' placeholder='시/군/구를 적어주세요' />
+									<input
+										type='text'
+										name='adr'
+										id='adr'
+										placeholder='시/군/구를 적어주세요'
+										onChange={handleChange}
+										value={val.adr}
+									/>
 									<input
 										type='text'
 										name='adr2'
 										id='adr2'
 										placeholder='아파트주소를 적어주세요 (선택)'
 									/>
+									<span className='err'>{err.adr}</span>
 								</td>
 							</tr>
 							<tr>
@@ -93,7 +188,15 @@ function Join(props) {
 									<label htmlFor='zip'></label> ZIP-CODE
 								</th>
 								<td>
-									<input type='text' name='zip' id='zip' placeholder='우편번호를 적어주세요' />
+									<input
+										type='text'
+										name='zip'
+										id='zip'
+										placeholder='우편번호를 적어주세요'
+										onChange={handleChange}
+										value={val.zip}
+									/>
+									<span className='err'>{err.zip}</span>
 								</td>
 							</tr>
 							<tr>
@@ -115,7 +218,10 @@ function Join(props) {
 										name='comments'
 										id='comments'
 										placeholder='남기는 말을 입력하세요'
+										onChange={handleChange}
+										value={val.comments}
 									></textarea>
+									<span className='err'>{err.comments}</span>
 								</td>
 							</tr>
 
