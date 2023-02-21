@@ -113,6 +113,8 @@
 
 @media screen and (max-width: $mobile) {
 	.About {
+		height: 2000px;
+
 		.inner {
 			min-height: auto;
 			article {

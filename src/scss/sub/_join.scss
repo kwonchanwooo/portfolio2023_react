@@ -83,6 +83,7 @@
 							padding: 10px;
 							background: rgba(0, 0, 0, 0.03);
 							border: 1px solid #aaa;
+							color: white;
 						}
 						.err {
 							display: block;
@@ -125,51 +126,36 @@
 	}
 }
 
-@media screen and (max-width: 1179px) {
-	.join {
+@media screen and (max-width: $tablet) {
+	.Join {
 		width: 100%;
-		.sub_visual {
-			height: 300px;
-		}
-		height: 1800px;
 		.inner {
 			width: 100%;
 			padding: 20px 20px;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			.wrap {
+			form {
 				width: 100%;
+			}
+			.help {
+				margin-top: 40px;
+				padding: 40px 0;
+				width: 100%;
+			}
+		}
+	}
 
-				.pagination {
-					.prev {
-						width: 80px;
-						font-size: 20px;
-						line-height: 20px;
+	@media screen and (max-width: $mobile) {
+		.join {
+			height: 1900px;
+			.sub_visual {
+				height: 200px;
+			}
+			.inner {
+				width: 100%;
+				padding: 20px 20px;
 
-						height: 20px;
-						i {
-							font-size: 20px;
-							line-height: 20px;
-						}
-					}
-					.next {
-						width: 80px;
-						font-size: 20px;
-						line-height: 20px;
-
-						height: 20px;
-						i {
-							font-size: 20px;
-							line-height: 20px;
-						}
-					}
-					.numbers {
-						a {
-							width: 20px;
-						}
-					}
-				}
 				.wrap {
 					width: 100%;
 					h1 {
@@ -177,56 +163,11 @@
 					}
 				}
 			}
-			.help {
-				padding: 40px 0;
-				width: 100%;
-			}
 		}
 	}
-}
-
-@media screen and (max-width: 539px) {
-	.join {
-		height: 1700px;
-		.sub_visual {
-			height: 200px;
-		}
-		.inner {
-			width: 100%;
-			padding: 20px 20px;
-			.pagination {
-				.prev {
-					width: 15px;
-				}
-				.next {
-					line-height: 30px;
-					width: 30px;
-					height: 30px;
-					i {
-						height: 30px;
-					}
-					span {
-						position: absolute;
-						top: -9999999999px;
-						opacity: 0;
-					}
-					i {
-						font-size: 15px;
-					}
-				}
-				.numbers {
-					a {
-						width: 15px;
-						font-size: 15px;
-					}
-				}
-			}
-			.wrap {
-				width: 100%;
-				h1 {
-					font-size: 40px;
-				}
-			}
-		}
+	.Join > .inner form fieldset table td input[type='text'],
+	.Join > .inner form fieldset table td input[type='password'],
+	.Join > .inner form fieldset table td select {
+		width: 90%;
 	}
 }
