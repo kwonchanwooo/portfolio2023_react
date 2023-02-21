@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Layout from '../commoon/Layout';
 
@@ -18,6 +18,7 @@ function Join(props) {
 
 	const [val, setVal] = useState(initVal);
 	const [err, setErr] = useState({});
+	const [submit, setSubmit] = useState(false);
 
 	const check = (value) => {
 		const errs = {};
@@ -49,12 +50,12 @@ function Join(props) {
 			errs.gender = '성별을 선택하세요.';
 		}
 		if (value.country === '') {
-			errs.edu = '국적을 선택하세요.';
+			errs.country = '국적을 선택하세요.';
 		}
 		if (value.adr.length < 10) {
 			errs.adr = '주소를 정확히 기입하세요';
 		}
-		if (value.zip.length > 4 || value.zip.length < 6) {
+		if (value.zip.length > 5) {
 			errs.zip = '우편번호 5글자를 입력해주세요';
 		}
 		if (value.comments.length < 20) {
@@ -68,10 +69,31 @@ function Join(props) {
 		const { name, value } = e.target;
 		setVal({ ...val, [name]: value });
 	};
+	const handleRadio = (e) => {
+		const { name } = e.target;
+		const isChecked = e.target.checked;
+		setVal({ ...val, [name]: isChecked });
+	};
+	const handleSelect = (e) => {
+		const { name } = e.target;
+		const selected = e.target.value;
+		setVal({ ...val, [name]: selected });
+	};
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setErr(check(val));
 	};
+
+	useEffect(() => {
+		const len = Object.keys(err).length;
+		if (len === 0 && submit) {
+			alert('진심으로 환영합니다!');
+			setVal(initVal);
+			history.push('/');
+		}
+	}, [err]);
+
 	return (
 		<Layout name={'Join'}>
 			<form onSubmit={handleSubmit}>
@@ -152,13 +174,14 @@ function Join(props) {
 									<label htmlFor='country'>Country</label>
 								</th>
 								<td>
-									<select name='country' id='country'>
+									<select name='country' id='country' onChange={handleSelect}>
 										<option value=''>선택하세요</option>
 										<option value='korea '>대한민국</option>
 										<option value='usa'>미국</option>
 										<option value='japan '>일본</option>
 										<option value='china'>중국</option>
 									</select>
+									<span className='err'>{err.country}</span>
 								</td>
 							</tr>
 							<tr>
@@ -205,7 +228,14 @@ function Join(props) {
 									<label htmlFor='male'>Male</label>
 									<input type='radio' name='gender' id='male' value='male' />
 									<label htmlFor='female'>Female</label>
-									<input type='radio' name='gender' id='female' value='female' />
+									<input
+										type='radio'
+										name='gender'
+										id='female'
+										value='female'
+										onChange={handleRadio}
+									/>
+									<span className='err'>{err.gender}</span>
 								</td>
 							</tr>
 
@@ -227,9 +257,9 @@ function Join(props) {
 
 							<tr>
 								<th colSpan='2'>
-									<input type='reset' value='cancel' />
+									<input type='reset' value='cancel' onClick={() => setVal(initVal)} />
 
-									<input type='submit' value='submit' />
+									<input type='submit' value='submit' onClick={() => setSubmit(true)} />
 								</th>
 							</tr>
 						</tbody>
