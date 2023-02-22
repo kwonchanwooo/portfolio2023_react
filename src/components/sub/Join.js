@@ -55,7 +55,7 @@ function Join(props) {
 		if (value.adr.length < 10) {
 			errs.adr = '주소를 정확히 기입하세요';
 		}
-		if (value.zip.length > 5) {
+		if (value.zip.length !== 5) {
 			errs.zip = '우편번호 5글자를 입력해주세요';
 		}
 		if (value.comments.length < 20) {
