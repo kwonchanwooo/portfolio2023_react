@@ -1,12 +1,12 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Layout from '../commoon/Layout';
 import Modal from '../commoon/Modal';
 
 function Video(props) {
 	const [vids, setVids] = useState([]);
-	const [open, setOpen] = useState(false);
 	const [index, setIndex] = useState(0);
+	const open = useRef(null);
 
 	useEffect(() => {
 		const key = 'AIzaSyA-UYRzqSCi4U5kxVd_JZ2vPlyksDRJJiQ';
@@ -32,7 +32,7 @@ function Video(props) {
 							<div
 								className='pic'
 								onClick={() => {
-									setOpen(true);
+									open.current.setOpen();
 									setIndex(index);
 								}}
 							>
@@ -48,16 +48,12 @@ function Video(props) {
 				})}
 			</Layout>
 
-			{open ? (
-				<Modal setOpen={setOpen}>
-					<iframe
-						title={vids[0].id}
-						src={`https://www.youtube.com/embed/${vids[index].snippet.resourceId.videoId}`}
-					></iframe>
-				</Modal>
-			) : (
-				''
-			)}
+			<Modal ref={open}>
+				<iframe
+					title={vids[index]?.id}
+					src={`https://www.youtube.com/embed/${vids[index]?.snippet.resourceId.videoId}`}
+				></iframe>
+			</Modal>
 		</>
 	);
 }
