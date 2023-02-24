@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Layout from '../commoon/Layout';
 
@@ -18,7 +18,7 @@ function Join(props) {
 
 	const [val, setVal] = useState(initVal);
 	const [err, setErr] = useState({});
-	const [submit, setSubmit] = useState(false);
+	const submit = useRef(false);
 
 	const check = (value) => {
 		const errs = {};
@@ -87,12 +87,12 @@ function Join(props) {
 
 	useEffect(() => {
 		const len = Object.keys(err).length;
-		if (len === 0 && submit) {
+		if (len === 0 && submit.current) {
 			alert('진심으로 환영합니다!');
-			setVal(initVal);
+
 			history.push('/');
 		}
-	}, [err]);
+	}, [err, history]);
 
 	return (
 		<Layout name={'Join'}>
@@ -259,7 +259,7 @@ function Join(props) {
 								<th colSpan='2'>
 									<input type='reset' value='cancel' onClick={() => setVal(initVal)} />
 
-									<input type='submit' value='submit' onClick={() => setSubmit(true)} />
+									<input type='submit' value='submit' onClick={() => submit.current(true)} />
 								</th>
 							</tr>
 						</tbody>

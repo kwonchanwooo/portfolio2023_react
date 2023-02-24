@@ -21,8 +21,6 @@ function Gallery() {
 		const spagal = '72157721470708003';
 		const banqgal = '72157721476188121';
 		const per_page = 1;
-
-		const num = 20;
 		let url = '';
 
 		if (opt.type === 'BANQUET')
