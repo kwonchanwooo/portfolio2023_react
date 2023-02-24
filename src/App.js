@@ -24,7 +24,7 @@ function App() {
 		<>
 			<Switch>
 				<Route exact path='/'>
-					<Header type={'main'} />
+					<Header />
 					<Visual />
 					<Top />
 					<Rank />
@@ -32,11 +32,10 @@ function App() {
 					<Banner />
 					<Tab />
 					<Faq />
-					{/* <Content /> */}
 				</Route>
 
 				<Route path='/'>
-					<Header type={'sub'} />
+					<Header />
 				</Route>
 			</Switch>
 			<Route path='/about'>
