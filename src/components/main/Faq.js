@@ -8,7 +8,7 @@ function Faq(props) {
 
 				<div className='question'>
 					<input type='radio' name='acc' id='acc1' />
-					<label for='acc1'>
+					<label htmlFor='acc1'>
 						<h2>01</h2>
 						<h3>How do I apply?</h3>
 					</label>
@@ -25,7 +25,7 @@ function Faq(props) {
 				</div>
 				<div className='question'>
 					<input type='radio' name='acc' id='acc2' />
-					<label for='acc2'>
+					<label htmlFor='acc2'>
 						<h2>02</h2>
 						<h3>How do I apply?</h3>
 					</label>
@@ -39,7 +39,7 @@ function Faq(props) {
 				</div>
 				<div className='question'>
 					<input type='radio' name='acc' id='acc3' />
-					<label for='acc3'>
+					<label htmlFor='acc3'>
 						<h2>03</h2>
 						<h3>How do I apply?</h3>
 					</label>
@@ -58,7 +58,7 @@ function Faq(props) {
 				</div>
 				<div className='question'>
 					<input type='radio' name='acc' id='acc4' />
-					<label for='acc4'>
+					<label htmlFor='acc4'>
 						<h2>04</h2>
 						<h3>How do I apply?</h3>
 					</label>

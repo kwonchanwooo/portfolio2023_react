@@ -9,9 +9,7 @@ function About(props) {
 			setMember(json.data.members);
 		});
 	}, []);
-	useEffect(() => {
-		console.log(Member);
-	}, [Member]);
+	useEffect(() => {}, [Member]);
 	return (
 		<Layout name={'About'}>
 			{Member.map((el, index) => {

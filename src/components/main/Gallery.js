@@ -13,28 +13,28 @@ function Gallery(props) {
 					<article>
 						<div className='pic'></div>
 						<h2>BANQUET</h2>
-						<a href='facilities.html'>
+						<Link to='/facilities.html'>
 							VIEW MORE <FontAwesomeIcon icon={faCaretRight} />
-						</a>
+						</Link>
 					</article>
 					<article>
 						<div className='pic'></div>
 						<h2>RESTAURANT</h2>
-						<Link href='/facilities'>
+						<Link to='/facilities'>
 							VIEW MORE <FontAwesomeIcon icon={faCaretRight} />
 						</Link>
 					</article>
 					<article>
 						<div className='pic'></div>
 						<h2>BAR</h2>
-						<Link href='/facilities'>
+						<Link to='/facilities'>
 							VIEW MORE <FontAwesomeIcon icon={faCaretRight} />
 						</Link>
 					</article>
 					<article>
 						<div className='pic'></div>
 						<h2>SPA</h2>
-						<Link href='/facilities'>
+						<Link to='/facilities'>
 							VIEW MORE <FontAwesomeIcon icon={faCaretRight} />
 						</Link>
 					</article>
