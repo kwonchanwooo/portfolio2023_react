@@ -5,6 +5,7 @@ import Header from './components/commoon/Header';
 import Banner from './components/main/Banner';
 import Faq from './components/main/Faq';
 import Gallery from './components/main/Gallery';
+import News from './components/main/News';
 import Rank from './components/main/Rank';
 import Tab from './components/main/Tab';
 import Top from './components/main/Top';
@@ -31,6 +32,7 @@ function App() {
 					<Gallery />
 					<Banner />
 					<Tab />
+					<News />
 					<Faq />
 				</Route>
 

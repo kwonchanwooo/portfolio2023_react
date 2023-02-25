@@ -1,0 +1,41 @@
+#news {
+	width: 100%;
+	background: rgb(23, 23, 23);
+	height: 650px;
+	padding-top: 100px;
+
+	.inner {
+		margin: 0 auto;
+		width: 1180px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		h1 {
+			width: 100%;
+			color: white;
+			font-size: 30px;
+			font-family: 'inter';
+		}
+		article {
+			margin-top: 50px;
+			width: 280px;
+			height: 300px;
+			background: rgb(29, 29, 29);
+			&:hover {
+				@include button;
+			}
+			h3 {
+				color: #fff;
+				margin-top: 50px;
+				font: bold 40px 'inter';
+				text-align: center;
+			}
+			p {
+				color: #aaa;
+				font: 20px 'roboto';
+				margin-top: 60px;
+				text-align: center;
+			}
+		}
+	}
+}
