@@ -61,7 +61,6 @@ footer {
 		}
 		p {
 			position: relative;
-			// bottom: -50px;
 			text-align: center;
 			font: 12px 'inter';
 			color: #999;
@@ -78,6 +77,18 @@ footer {
 			}
 			.logo2 {
 				right: 40px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	footer {
+		.inner {
+			.second {
+				width: 80%;
+				display: flex;
+				justify-content: center;
 			}
 		}
 	}

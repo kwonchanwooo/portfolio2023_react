@@ -100,3 +100,107 @@
 .fa-hand-sparkles {
 	@include red;
 }
+@media screen and (max-width: $tablet) {
+	#top {
+		height: 1100px;
+		.inner {
+			width: 100%;
+			padding-left: 40px;
+			padding-right: 40px;
+			.wrap {
+				width: 100%;
+				article {
+					margin-right: 2%;
+					width: 32%;
+					height: 400px;
+					> h1 {
+						font-size: 18px;
+					}
+					p {
+						font-size: 13px;
+						padding-top: 20px;
+						padding-bottom: 10px;
+					}
+					a {
+						font-size: 13px;
+					}
+					&:last-child {
+						margin-right: 0;
+					}
+					.pic {
+						width: calc(100% / 3.5);
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: $mobile) {
+	#top {
+		.inner {
+			.wrap {
+				article {
+					padding: 30px 50px 0 50px;
+					width: 100%;
+					margin-bottom: 20px;
+					height: 300px;
+					&:hover {
+						background: linear-gradient(90deg, rgb(126, 19, 26), rgb(196, 30, 40));
+						.pic {
+							width: 60px;
+							height: 60px;
+							font-size: 60px;
+							i {
+								color: white;
+							}
+						}
+						p {
+							color: white;
+							opacity: 0.6;
+						}
+						a {
+							color: white;
+							i {
+								color: white;
+							}
+							&:hover {
+								color: rgb(16, 16, 16);
+								i {
+									color: rgb(16, 16, 16);
+								}
+							}
+						}
+					}
+					.pic {
+						width: 60px;
+						height: 60px;
+						font-size: 60px;
+						margin-bottom: 30px;
+						i {
+							@include red;
+						}
+					}
+					> h1 {
+						font: bold 30px/1 'inter';
+					}
+					p {
+						font: 15px/20px 'roboto';
+						display: block;
+						color: #999;
+						padding-bottom: 30px;
+						opacity: 0.6;
+					}
+					a {
+						font-size: 15px 'roboto';
+						@include red;
+
+						i {
+							font: 15px;
+							@include red;
+						}
+					}
+				}
+			}
+		}
+	}
+}

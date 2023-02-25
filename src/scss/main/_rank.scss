@@ -89,3 +89,62 @@
 		}
 	}
 }
+
+@media screen and (max-width: $tablet) {
+	#rank {
+		.inner {
+			width: 100%;
+			padding-left: 40px;
+			padding-right: 40px;
+			.wrap {
+				> h1 {
+					width: 50%;
+				}
+				article {
+					width: 32%;
+					&:nth-of-type(1) {
+						margin-right: 2%;
+						width: 32%;
+						padding-top: 50px;
+					}
+					&:nth-of-type(2) {
+						margin-right: 2%;
+					}
+					&:nth-of-type(4) {
+						margin-right: 2%;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: $mobile) {
+	#rank {
+		height: 650px;
+		.inner {
+			.wrap {
+				article {
+					&:nth-of-type(1) {
+						width: 100%;
+						margin-bottom: 20px;
+						padding-top: 85px;
+					}
+					&:nth-of-type(2) {
+						width: 47%;
+						margin-right: 6%;
+					}
+					&:nth-of-type(3) {
+						width: 47%;
+					}
+					&:nth-of-type(4) {
+						width: 47%;
+						margin-right: 6%;
+					}
+					&:nth-of-type(5) {
+						width: 47%;
+					}
+				}
+			}
+		}
+	}
+}

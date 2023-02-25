@@ -107,3 +107,10 @@
 		}
 	}
 }
+@media screen and (max-width: $tablet) {
+}
+@media screen and (max-width: $mobile) {
+	#faq {
+		min-height: 80vh;
+	}
+}

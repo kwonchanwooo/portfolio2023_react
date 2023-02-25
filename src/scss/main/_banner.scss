@@ -53,3 +53,54 @@
 		}
 	}
 }
+@media screen and (max-width: $tablet) {
+	#banner {
+		padding-right: 40px;
+		padding-left: 40px;
+		.inner {
+			width: 100%;
+			.wrap {
+				h1 {
+					width: 95%;
+					font-size: 40px;
+					margin-top: 10px;
+				}
+				p {
+					display: none;
+				}
+				a {
+					right: -10%;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: $mobile) {
+	#banner {
+		height: 400px;
+		.inner {
+			.wrap {
+				padding: 0;
+				width: 100%;
+				margin-left: 0;
+				margin-right: 40px;
+				justify-content: flex-start;
+				> h1 {
+					width: 100%;
+					font-size: 30px;
+					text-align: center;
+					margin-top: 50px;
+				}
+				a {
+					display: block;
+					margin: 0 auto;
+					width: 150px;
+					height: 50px;
+					text-align: center;
+					transform: translate(0, 0);
+					position: inherit;
+				}
+			}
+		}
+	}
+}
