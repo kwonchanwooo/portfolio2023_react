@@ -1,7 +1,7 @@
 import { faBars, faHotel } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useRef } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Menu from './Menu';
 function Header(props) {
 	const menu = useRef(null);
@@ -11,9 +11,9 @@ function Header(props) {
 			<header className={props.type}>
 				<div className='inner'>
 					<h1>
-						<NavLink exact to='/' activeStyle={active}>
+						<Link to='/' activeStyle={active}>
 							<FontAwesomeIcon icon={faHotel} />
-						</NavLink>
+						</Link>
 					</h1>
 					<ul id='gnb'>
 						<li>

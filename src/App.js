@@ -2,14 +2,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import Footer from './components/commoon/Footer';
 import Header from './components/commoon/Header';
-import Banner from './components/main/Banner';
-import Faq from './components/main/Faq';
-import Gallery from './components/main/Gallery';
-import News from './components/main/News';
-import Rank from './components/main/Rank';
-import Tab from './components/main/Tab';
-import Top from './components/main/Top';
-import Visual from './components/main/Visual';
+import Main from './components/main/Main';
 import About from './components/sub/About';
 import Community from './components/sub/Community';
 import Facilities from './components/sub/Facilities';
@@ -25,15 +18,7 @@ function App() {
 		<>
 			<Switch>
 				<Route exact path='/'>
-					<Header />
-					<Visual />
-					<Top />
-					<Rank />
-					<Gallery />
-					<Banner />
-					<Tab />
-					<News />
-					<Faq />
+					<Main />
 				</Route>
 
 				<Route path='/'>
