@@ -1,9 +1,11 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Layout from '../commoon/Layout';
 function Location() {
+	const option = useRef(null);
+	const info = useRef(null);
 	const container = useRef(null);
 	const { kakao } = window;
-	const info = [
+	info.current = [
 		{
 			title: '서울 이태원점',
 			latlng: new kakao.maps.LatLng(37.5347906, 126.9935937),
@@ -15,30 +17,31 @@ function Location() {
 	];
 
 	const [index, setIndex] = useState(0);
-	const [location, setLocation] = useState(null);
 
-	const option = {
-		center: info[index].latlng,
+	option.current = {
+		center: info.current[index].latlng,
 		level: 3,
 	};
-	const markerPosition = option.center;
-	const mapTypeControl = new kakao.maps.MapTypeControl();
-	const zoomControl = new kakao.maps.ZoomControl();
+	const markerPosition = option.current.center;
+	const mapTypeControl = useMemo(() => new kakao.maps.MapTypeControl(), [kakao]);
+	const zoomControl = useMemo(() => new kakao.maps.ZoomControl(), [kakao]);
 
-	const marker = new kakao.maps.Marker({
-		position: markerPosition,
-	});
+	const marker = useMemo(() => {
+		return new kakao.maps.Marker({
+			position: markerPosition,
+		});
+	}, [kakao, markerPosition]);
 
 	useEffect(() => {
 		container.current.innerHTML = '';
-		const map = new kakao.maps.Map(container.current, option);
+		const map = new kakao.maps.Map(container.current, option.current);
 		marker.setMap(map);
-		setLocation(map);
+
 		map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
 		map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
 		const setCenter = () => {
-			map.setCenter(info[index].latlng);
+			map.setCenter(info.current[index].latlng);
 		};
 
 		map.setZoomable(false);
@@ -47,14 +50,14 @@ function Location() {
 		return () => {
 			window.removeEventListener('resize', setCenter);
 		};
-	}, [index]);
+	}, [index, kakao, mapTypeControl, marker, zoomControl]);
 
 	return (
 		<Layout name='Location'>
 			<div id='map' ref={container}></div>
 			<nav>
 				<ul className='branch'>
-					{info.map((el, idx) => {
+					{info.current.map((el, idx) => {
 						return (
 							<li
 								key={idx}
