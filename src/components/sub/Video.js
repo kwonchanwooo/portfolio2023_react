@@ -10,7 +10,6 @@ function Video(props) {
 	const open = useRef(null);
 
 	const vids = useSelector((store) => store.videoReducer.video);
-	console.log(vids);
 	useEffect(() => {
 		const key = 'AIzaSyA-UYRzqSCi4U5kxVd_JZ2vPlyksDRJJiQ';
 		const playlistId = 'PLqxc4-9rluJ8Ks1sNOzeOADYOJLCLzfiR';
