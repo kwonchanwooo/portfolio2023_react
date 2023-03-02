@@ -1,4 +1,4 @@
-import axios from 'axios';
+import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import Footer from './components/commoon/Footer';
@@ -11,24 +11,16 @@ import Join from './components/sub/Join';
 import Location from './components/sub/Location';
 import Rooms from './components/sub/Rooms';
 import Video from './components/sub/Video';
-
-import { useEffect } from 'react';
+import { fetchVideo } from './redux/videoSlice';
 import './scss/style.scss';
 
 function App() {
 	const dispatch = useDispatch();
-	const fetchVideo = async () => {
-		const key = 'AIzaSyA-UYRzqSCi4U5kxVd_JZ2vPlyksDRJJiQ';
-		const playlistId = 'PLqxc4-9rluJ8Ks1sNOzeOADYOJLCLzfiR';
-		const num = 6;
-		const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlistId}&maxResults=${num}`;
 
-		const result = await axios.get(url);
-		dispatch({ type: 'SET_VIDEO', payload: result.data.items });
-	};
 	useEffect(() => {
-		fetchVideo();
-	}, []);
+		dispatch(fetchVideo());
+	}, [dispatch]);
+
 	return (
 		<>
 			<Switch>

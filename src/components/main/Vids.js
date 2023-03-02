@@ -3,14 +3,14 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 function Vids() {
-	const { video } = useSelector((store) => store.videoReducer);
-	console.log(video);
+	const vids = useSelector((store) => store.video.data);
+
 	return (
 		<section id='vids'>
 			<div className='inner'>
 				<h1>Youtube</h1>
 
-				{video.map((vid, idx) => {
+				{vids.map((vid, idx) => {
 					if (idx >= 3) return null;
 					return (
 						<article key={vid.id}>
