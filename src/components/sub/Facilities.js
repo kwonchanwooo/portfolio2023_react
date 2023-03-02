@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useEffect, useRef, useState } from 'react';
 import Masonry from 'react-masonry-component';
 import Layout from '../commoon/Layout';
@@ -13,30 +12,6 @@ function Gallery() {
 	const [Loading, setLoading] = useState(true);
 
 	const getFlickr = async (opt) => {
-		const baseURL = 'https://www.flickr.com/services/rest/?';
-		const key = '68728a337d057b4402914f709958247a';
-		const method_getPhotos = 'flickr.galleries.getPhotos';
-		const restgal = '72157721476189071';
-		const bargal = '72157721524655065';
-		const spagal = '72157721470708003';
-		const banqgal = '72157721476188121';
-		const per_page = 1;
-		let url = '';
-
-		if (opt.type === 'BANQUET')
-			url = `${baseURL}method=${method_getPhotos}&api_key=${key}&per_page=${per_page}&gallery_id=${banqgal}&format=json&nojsoncallback=1`;
-
-		if (opt.type === 'BAR')
-			url = `${baseURL}method=${method_getPhotos}&api_key=${key}&per_page=${per_page}&gallery_id=${bargal}&format=json&nojsoncallback=1`;
-		if (opt.type === 'SPA')
-			url = `${baseURL}method=${method_getPhotos}&api_key=${key}&per_page=${per_page}&gallery_id=${spagal}&format=json&nojsoncallback=1`;
-		if (opt.type === 'RESTAURANT')
-			url = `${baseURL}method=${method_getPhotos}&api_key=${key}&per_page=${per_page}&gallery_id=${restgal}&format=json&nojsoncallback=1`;
-
-		if (opt.type === 'search')
-			url = `${baseURL}method=${method_getPhotos}&api_key=${key}&per_page=${per_page}&gallery_id=${banqgal}&format=json&nojsoncallback=1`;
-		const result = await axios.get(url);
-
 		if (result.data.photos.photo.length === 0) {
 			frame.current.classList.add('on');
 			setLoading(false);

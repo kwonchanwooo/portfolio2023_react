@@ -1,23 +1,12 @@
-import axios from 'axios';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
+import { useSelector } from 'react-redux';
 import Layout from '../commoon/Layout';
 import Modal from '../commoon/Modal';
 
 function Video(props) {
-	const [vids, setVids] = useState([]);
 	const [index, setIndex] = useState(0);
+	const vids = useSelector((store) => store.videoReducer.video);
 	const open = useRef(null);
-
-	useEffect(() => {
-		const key = 'AIzaSyA-UYRzqSCi4U5kxVd_JZ2vPlyksDRJJiQ';
-		const playlistId = 'PLqxc4-9rluJ8Ks1sNOzeOADYOJLCLzfiR';
-		const num = 6;
-		const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlistId}&maxResults=${num}`;
-
-		axios.get(url).then((json) => {
-			setVids(json.data.items);
-		});
-	}, []);
 
 	return (
 		<>

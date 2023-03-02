@@ -7,6 +7,7 @@ import News from './News';
 import Rank from './Rank';
 import Tab from './Tab';
 import Top from './Top';
+import Vids from './Vids';
 import Visual from './Visual';
 function Main(props) {
 	return (
@@ -16,6 +17,7 @@ function Main(props) {
 			<Top />
 			<Rank />
 			<Gallery />
+			<Vids />
 			<Banner />
 			<Tab />
 			<News />

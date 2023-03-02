@@ -1,5 +1,6 @@
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
-
 import Footer from './components/commoon/Footer';
 import Header from './components/commoon/Header';
 import Main from './components/main/Main';
@@ -10,10 +11,15 @@ import Join from './components/sub/Join';
 import Location from './components/sub/Location';
 import Rooms from './components/sub/Rooms';
 import Video from './components/sub/Video';
-
+import * as types from './redux/actionType';
 import './scss/style.scss';
 
 function App() {
+	const dispatch = useDispatch();
+	useEffect(() => {
+		dispatch({ type: types.VIDEO.start });
+		dispatch({ type: types.FLICKER.start, opt: { type: 'BANQUET' } });
+	}, [dispatch]);
 	return (
 		<>
 			<Switch>
