@@ -1,25 +1,76 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { Route, Switch } from 'react-router-dom';
+import Footer from './components/commoon/Footer';
+import Header from './components/commoon/Header';
+import Main from './components/main/Main';
+import About from './components/sub/About';
+import Community from './components/sub/Community';
+import Facilities from './components/sub/Facilities';
+import Join from './components/sub/Join';
+import Location from './components/sub/Location';
+import Rooms from './components/sub/Rooms';
+import Video from './components/sub/Video';
+
+import { useEffect } from 'react';
+import './scss/style.scss';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const dispatch = useDispatch();
+	const fetchVideo = async () => {
+		const key = 'AIzaSyA-UYRzqSCi4U5kxVd_JZ2vPlyksDRJJiQ';
+		const playlistId = 'PLqxc4-9rluJ8Ks1sNOzeOADYOJLCLzfiR';
+		const num = 6;
+		const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlistId}&maxResults=${num}`;
+
+		const result = await axios.get(url);
+		dispatch({ type: 'SET_VIDEO', payload: result.data.items });
+	};
+	useEffect(() => {
+		fetchVideo();
+	}, []);
+	return (
+		<>
+			<Switch>
+				<Route exact path='/'>
+					<Main />
+				</Route>
+
+				<Route path='/'>
+					<Header />
+				</Route>
+			</Switch>
+			<Route path='/about'>
+				<About />
+			</Route>
+
+			<Route path='/video'>
+				<Video />
+			</Route>
+
+			<Route path='/location'>
+				<Location />
+			</Route>
+
+			<Route path='/rooms'>
+				<Rooms />
+			</Route>
+
+			<Route path='/facilities'>
+				<Facilities />
+			</Route>
+
+			<Route path='/community'>
+				<Community />
+			</Route>
+
+			<Route path='/join'>
+				<Join />
+			</Route>
+
+			<Footer />
+		</>
+	);
 }
 
 export default App;

@@ -1,0 +1,30 @@
+$tablet: 1179px;
+$mobile: 539px;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap');
+@import './common/mixin';
+@import './common/reset';
+@import './common/header';
+@import './common/layout';
+@import './common/footer';
+@import './common/modal';
+@import './common/menu';
+
+@import './main/content';
+@import './main/visual';
+@import './main/banner';
+@import './main/faq';
+@import './main/gallery';
+@import './main/rank';
+@import './main/tab';
+@import './main/News';
+@import './main/top';
+@import './main/vids';
+
+@import './sub/community';
+@import './sub/about';
+@import './sub/facilities';
+@import './sub/location';
+@import './sub/join';
+@import './sub/video';
+@import './sub/rooms';

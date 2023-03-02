@@ -1,0 +1,116 @@
+#faq {
+	width: 100%;
+	background: linear-gradient(90deg, rgb(16, 16, 16) 50%, rgb(23, 23, 23) 50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 60vh;
+	.container {
+		max-width: 1180px;
+		margin: 0px 40px;
+		flex-direction: column;
+
+		h1 {
+			color: white;
+			font-size: 30px;
+			font-family: 'inter';
+		}
+		.question {
+			position: relative;
+			background: rgb(29, 29, 29);
+			margin-top: 20px;
+			overflow: hidden;
+			padding: 0px 20px 20px;
+
+			&:hover label::after {
+				@include red;
+			}
+			input {
+				appearance: none;
+				&:checked + label::after {
+					transform: rotate(135deg);
+					@include red;
+					opacity: 0;
+				}
+				&:checked + label h2 {
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					justify-content: flex-end;
+					font-size: 100px;
+					padding: 20px;
+					transition: 1s;
+					@include red;
+					opacity: 0.6;
+				}
+				&:checked ~ .contents {
+					max-height: 100vh;
+				}
+				&:checked ~ label h3 {
+					padding-top: 10px;
+					color: white;
+					font: bold 25px/1 'inter';
+				}
+			}
+			label {
+				display: flex;
+				align-items: center;
+				cursor: pointer;
+				&::after {
+					content: '+';
+					position: absolute;
+					right: 30px;
+					font-size: 30px;
+					transition: 1s;
+					color: white;
+				}
+				h2 {
+					width: 40px;
+					height: 40px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: #fff;
+					font-size: 30px;
+					font-family: 'inter';
+					margin-right: 10px;
+					vertical-align: middle;
+					padding-left: 20px;
+				}
+				h3 {
+					font-weight: 500px;
+					color: white;
+					position: relative;
+					font-family: 'inter';
+					z-index: 2;
+					padding-left: 20px;
+				}
+			}
+			.contents {
+				max-height: 0;
+				transition: 1s;
+				overflow: hidden;
+				p {
+					position: relative;
+					padding: 15px 0;
+					z-index: 2;
+					font: bold 15px/20px 'roboto';
+					max-width: 70%;
+					color: #999;
+					opacity: 0.6;
+					padding-left: 20px;
+					line-height: 20px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: $tablet) {
+}
+@media screen and (max-width: $mobile) {
+	#faq {
+		min-height: 80vh;
+	}
+}
