@@ -1,10 +1,11 @@
 import { faBars, faHotel } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { memo, useRef } from 'react';
+import React, { memo } from 'react';
+import { useDispatch } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
-import Menu from './Menu';
+import { toggle } from '../../redux/menuSlice';
 function Header(props) {
-	const menu = useRef(null);
+	const dispatch = useDispatch();
 	const active = { color: 'rgb(207, 24, 41)' };
 	return (
 		<>
@@ -52,11 +53,9 @@ function Header(props) {
 							</NavLink>
 						</li>
 					</ul>
-					<FontAwesomeIcon icon={faBars} onClick={() => menu.current.setToggle()} />
+					<FontAwesomeIcon icon={faBars} onClick={() => dispatch(toggle())} />
 				</div>
 			</header>
-
-			<Menu ref={menu} />
 		</>
 	);
 }

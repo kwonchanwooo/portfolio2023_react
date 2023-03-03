@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import Footer from './components/commoon/Footer';
 import Header from './components/commoon/Header';
+import Menu from './components/commoon/Menu';
 import Main from './components/main/Main';
 import About from './components/sub/About';
 import Community from './components/sub/Community';
@@ -11,6 +12,7 @@ import Join from './components/sub/Join';
 import Location from './components/sub/Location';
 import Rooms from './components/sub/Rooms';
 import Video from './components/sub/Video';
+import { fetchFlickr } from './redux/flickerSlice';
 import { fetchVideo } from './redux/videoSlice';
 import './scss/style.scss';
 
@@ -19,6 +21,7 @@ function App() {
 
 	useEffect(() => {
 		dispatch(fetchVideo());
+		dispatch(fetchFlickr({ type: 'BANQUET' }));
 	}, [dispatch]);
 
 	return (
@@ -32,6 +35,7 @@ function App() {
 					<Header />
 				</Route>
 			</Switch>
+
 			<Route path='/about'>
 				<About />
 			</Route>
@@ -61,6 +65,7 @@ function App() {
 			</Route>
 
 			<Footer />
+			<Menu />
 		</>
 	);
 }

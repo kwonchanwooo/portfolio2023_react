@@ -4,6 +4,7 @@ import Banner from './Banner';
 import Faq from './Faq';
 import Gallery from './Gallery';
 import News from './News';
+import Pics from './Pics';
 import Rank from './Rank';
 import Tab from './Tab';
 import Top from './Top';
@@ -19,6 +20,7 @@ function Main(props) {
 			<Gallery />
 			<Vids />
 			<Banner />
+			<Pics />
 			<Tab />
 			<News />
 			<Faq />

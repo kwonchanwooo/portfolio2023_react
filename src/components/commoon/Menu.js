@@ -2,31 +2,31 @@ import { faSpotify, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-ic
 import { faHotel } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { AnimatePresence, motion } from 'framer-motion';
-import React, { forwardRef, useEffect, useImperativeHandle, useState } from 'react';
+import React, { useEffect } from 'react';
 
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
-const Menu = forwardRef((props, ref) => {
-	const [Open, setOpen] = useState(false);
-	const active = { color: 'rgb(207, 24, 41)' };
+import { close } from '../../redux/menuSlice';
+function Menu() {
+	const dispatch = useDispatch();
+	const menu = useSelector((store) => store.menu.open);
 
-	useImperativeHandle(ref, () => {
-		return { setToggle: () => setOpen(!Open) };
-	});
+	const active = { color: 'rgb(207, 24, 41)' };
 
 	useEffect(() => {
 		window.addEventListener('resize', () => {
-			if (window.innerWidth >= 1180) setOpen(false);
+			if (window.innerWidth >= 1180) dispatch(close());
 		});
-	}, []);
+	}, [dispatch]);
 	return (
 		<AnimatePresence>
-			{Open && (
+			{menu && (
 				<motion.nav
 					id='mobilePanel'
 					initial={{ x: -270, opacity: 0 }}
 					animate={{ x: 0, opacity: 1, transition: { duration: 0.3 } }}
 					exit={{ x: -270, opacity: 0 }}
-					onClick={() => setOpen(false)}
+					onClick={() => dispatch(close())}
 				>
 					<h1>
 						<Link to='/'>
@@ -88,6 +88,6 @@ const Menu = forwardRef((props, ref) => {
 			)}
 		</AnimatePresence>
 	);
-});
+}
 
 export default Menu;

@@ -1,80 +1,46 @@
-import axios from 'axios';
 import { useEffect, useRef, useState } from 'react';
 import Masonry from 'react-masonry-component';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchFlickr } from '../../redux/flickerSlice';
 import Layout from '../commoon/Layout';
 import Modal from '../commoon/Modal';
 
 function Gallery() {
+	const dispatch = useDispatch();
+	const init = useRef(true);
 	const open = useRef(null);
 	const frame = useRef(null);
 	const input = useRef(null);
-	const [Items, setItems] = useState([]);
 	const [Index, setIndex] = useState(0);
 	const [Loading, setLoading] = useState(true);
-
-	const getFlickr = async (opt) => {
-		const baseURL = 'https://www.flickr.com/services/rest/?';
-		const key = '68728a337d057b4402914f709958247a';
-		const method_getPhotos = 'flickr.galleries.getPhotos';
-		const restgal = '72157721476189071';
-		const bargal = '72157721524655065';
-		const spagal = '72157721470708003';
-		const banqgal = '72157721476188121';
-		const per_page = 1;
-		let url = '';
-
-		if (opt.type === 'BANQUET')
-			url = `${baseURL}method=${method_getPhotos}&api_key=${key}&per_page=${per_page}&gallery_id=${banqgal}&format=json&nojsoncallback=1`;
-
-		if (opt.type === 'BAR')
-			url = `${baseURL}method=${method_getPhotos}&api_key=${key}&per_page=${per_page}&gallery_id=${bargal}&format=json&nojsoncallback=1`;
-		if (opt.type === 'SPA')
-			url = `${baseURL}method=${method_getPhotos}&api_key=${key}&per_page=${per_page}&gallery_id=${spagal}&format=json&nojsoncallback=1`;
-		if (opt.type === 'RESTAURANT')
-			url = `${baseURL}method=${method_getPhotos}&api_key=${key}&per_page=${per_page}&gallery_id=${restgal}&format=json&nojsoncallback=1`;
-
-		if (opt.type === 'search')
-			url = `${baseURL}method=${method_getPhotos}&api_key=${key}&per_page=${per_page}&gallery_id=${banqgal}&format=json&nojsoncallback=1`;
-		const result = await axios.get(url);
-
-		if (result.data.photos.photo.length === 0) {
-			frame.current.classList.add('on');
-			setLoading(false);
-			return alert('해당 검색어의 결과 이미지가 없습니다.');
-		}
-		setItems(result.data.photos.photo);
-
-		setTimeout(() => {
-			setLoading(false);
-			frame.current.classList.add('on');
-		}, 500);
-	};
+	const Items = useSelector((store) => store.flickr.data);
 
 	const Banquet = () => {
 		frame.current.classList.remove('on');
 		setLoading(true);
-		getFlickr({ type: 'BANQUET' });
+		dispatch(fetchFlickr({ type: 'BANQUET' }));
 	};
 	const Restaurant = () => {
 		frame.current.classList.remove('on');
 		setLoading(true);
-		getFlickr({ type: 'RESTAURANT' });
+		dispatch(fetchFlickr({ type: 'RESTAURANT' }));
 	};
 	const Bar = () => {
 		frame.current.classList.remove('on');
 		setLoading(true);
-		getFlickr({ type: 'BAR' });
+		dispatch(fetchFlickr({ type: 'BAR' }));
 	};
 	const Spa = () => {
 		frame.current.classList.remove('on');
 		setLoading(true);
-		getFlickr({ type: 'SPA' });
+		dispatch(fetchFlickr({ type: 'SPA' }));
 	};
 
 	const showUser = (e) => {
+		init.current = false;
 		frame.current.classList.remove('on');
 		setLoading(true);
-		getFlickr({ type: 'user', user: e.target.innerText });
+		dispatch(fetchFlickr({ type: 'user', user: e.target.innerText }));
 	};
 
 	const showSearch = () => {
@@ -83,7 +49,7 @@ function Gallery() {
 		input.current.value = '';
 		frame.current.classList.remove('on');
 		setLoading(true);
-		getFlickr({ type: 'search', tags: result });
+		dispatch(fetchFlickr({ type: 'search', tags: result }));
 	};
 
 	let handleKeyUp = (e) => {
@@ -91,9 +57,17 @@ function Gallery() {
 	};
 
 	useEffect(() => {
-		getFlickr({ type: 'BANQUET' });
-	}, []);
-
+		if (Items.length === 0 && !init.current) {
+			dispatch(fetchFlickr({ type: 'user', user: '164021883@N04' }));
+			frame.current.classList.remove('on');
+			setLoading(true);
+			return alert('검색어의 결과 이미지가 없습니다.');
+		}
+		setTimeout(() => {
+			frame.current.classList.add('on');
+			setLoading(false);
+		}, 500);
+	}, [Items, dispatch]);
 	return (
 		<>
 			<Layout name='Gallery'>
