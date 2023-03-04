@@ -1,12 +1,3 @@
-import {
-	faHotTubPerson,
-	faMugSaucer,
-	faSmoking,
-	faUtensils,
-	faWifi,
-	faWind,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -14,6 +5,7 @@ import { EffectCoverflow, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+import DescArticle from './DescArticle';
 
 function RoomInner(props) {
 	return (
@@ -65,35 +57,7 @@ function RoomInner(props) {
 								24-hour room service. Book now for an unforgettable stay.
 							</p>
 						</div>
-						<article>
-							<div className='right'>
-								<span>
-									Free WIFI
-									<FontAwesomeIcon icon={faWifi} />
-								</span>
-								<span>
-									No smoking <FontAwesomeIcon icon={faSmoking} />
-								</span>
-								<span>
-									Aircondition <FontAwesomeIcon icon={faWind} />
-								</span>
-							</div>
-							<div className='left'>
-								<span>
-									Breakfast
-									<FontAwesomeIcon icon={faMugSaucer} />
-								</span>
-								<span>
-									Tub
-									<FontAwesomeIcon icon={faHotTubPerson} />
-								</span>
-
-								<span>
-									Restaurant
-									<FontAwesomeIcon icon={faUtensils} />
-								</span>
-							</div>
-						</article>
+						<DescArticle />
 					</div>
 				</div>
 			</section>
