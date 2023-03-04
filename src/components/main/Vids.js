@@ -52,6 +52,7 @@ function Vids() {
 		const btnNext = document.querySelector('.swiper-button-next');
 		const faPlayBtn = document.querySelector('.fa-play');
 		const faPauseBtn = document.querySelector('.fa-pause');
+
 		[btnPagination, btnPrev, btnNext].map((el, idx) =>
 			el.addEventListener('click', () => {
 				faPlayBtn.classList.remove('on');

@@ -1,11 +1,16 @@
 import React from 'react';
-import Layout from '../commoon/Layout';
+import Btns from './Btns';
+import RoomInner from './RoomInner';
 
 function Rooms(props) {
 	return (
-		<Layout name={'Rooms'}>
-			<p>Rooms</p>
-		</Layout>
+		<>
+			<RoomInner />
+			<RoomInner />
+			<RoomInner />
+			<RoomInner />
+			<Btns />
+		</>
 	);
 }
 
