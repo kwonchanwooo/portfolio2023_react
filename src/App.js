@@ -21,7 +21,7 @@ function App() {
 
 	useEffect(() => {
 		dispatch(fetchVideo());
-		dispatch(fetchFlickr({ type: 'BANQUET' }));
+		dispatch(fetchFlickr({ type: 'search', tags: 'nice hotel' }));
 	}, [dispatch]);
 
 	return (

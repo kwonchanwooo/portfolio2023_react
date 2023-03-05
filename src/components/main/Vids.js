@@ -62,7 +62,7 @@ function Vids() {
 	}, []);
 	return (
 		<>
-			<section id='vids' className='myScroll'>
+			<section id='vids'>
 				<Swiper
 					slidesPerView={1}
 					spaceBetween={50}

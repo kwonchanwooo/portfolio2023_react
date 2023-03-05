@@ -1,10 +1,19 @@
 #pics {
 	width: 100%;
 	height: 100vh;
-	background: orange;
+	background: linear-gradient(26deg, rgb(16, 16, 16) 50%, rgb(23, 23, 23) 50%);
 	position: relative;
 	padding: 10vw;
 	overflow: hidden;
+	.inner {
+		> h1 {
+			font: bold 30px/1 'inter';
+			margin-bottom: 20px;
+			color: white;
+		}
+		width: 1180px;
+		margin: 0 auto;
+	}
 
 	ul {
 		width: 100%;
@@ -14,5 +23,20 @@
 		align-content: center;
 		margin-top: 80px;
 		cursor: pointer;
+
+		li {
+			width: calc(100% / 5);
+			margin-right: 20px;
+			margin-bottom: 20px;
+			filter: grayscale(100);
+			&:hover {
+				filter: grayscale(0);
+			}
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
 	}
 }

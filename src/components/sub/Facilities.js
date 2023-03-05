@@ -50,6 +50,7 @@ function Gallery() {
 		frame.current.classList.remove('on');
 		setLoading(true);
 		dispatch(fetchFlickr({ type: 'search', tags: result }));
+		init.current = false;
 	};
 
 	let handleKeyUp = (e) => {
@@ -58,7 +59,7 @@ function Gallery() {
 
 	useEffect(() => {
 		if (Items.length === 0 && !init.current) {
-			dispatch(fetchFlickr({ type: 'user', user: '164021883@N04' }));
+			dispatch(fetchFlickr({ type: 'BANQUET' }));
 			frame.current.classList.remove('on');
 			setLoading(true);
 			return alert('검색어의 결과 이미지가 없습니다.');
