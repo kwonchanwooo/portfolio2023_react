@@ -1,10 +1,9 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
+import React, { memo } from 'react';
 import { EffectCoverflow, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import DescArticle from './DescArticle';
 
 function Standard(props) {
@@ -15,6 +14,7 @@ function Standard(props) {
 					<Swiper
 						effect={'coverflow'}
 						grabCursor={true}
+						loop={true}
 						centeredSlides={true}
 						slidesPerView={'auto'}
 						coverflowEffect={{
@@ -65,4 +65,4 @@ function Standard(props) {
 	);
 }
 
-export default Standard;
+export default memo(Standard);

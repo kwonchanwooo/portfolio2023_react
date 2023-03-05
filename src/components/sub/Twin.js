@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { EffectCoverflow, Pagination } from 'swiper';
@@ -7,7 +7,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import DescArticle from './DescArticle';
 
-function Twin(props) {
+function Twin({ scrolled, pos }) {
 	return (
 		<section id='roomInner' className='myScroll'>
 			<section>
@@ -16,6 +16,7 @@ function Twin(props) {
 						effect={'coverflow'}
 						grabCursor={true}
 						centeredSlides={true}
+						loop={true}
 						slidesPerView={'auto'}
 						coverflowEffect={{
 							rotate: 50,
@@ -29,24 +30,21 @@ function Twin(props) {
 						className='mySwiper'
 					>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/standard/standard1.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/twin/twin1.jpg`} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/standard/standard2.jpg`} />{' '}
+							<img src={`${process.env.PUBLIC_URL}/img/twin/twin2.jpg`} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/standard/standard3.jpg`} />{' '}
+							<img src={`${process.env.PUBLIC_URL}/img/twin/twin3.jpg`} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/standard/standard4.jpg`} />{' '}
-						</SwiperSlide>
-						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/standard/standard5.jpg`} />{' '}
+							<img src={`${process.env.PUBLIC_URL}/img/twin/twin4.jpg`} />{' '}
 						</SwiperSlide>
 					</Swiper>
 
 					<div className='desc'>
-						<div className='desctxt'>
+						<div className='desctxt' style={{ opacity: `${pos - scrolled}` }}>
 							<h1>Twin Room</h1>
 							<p>
 								Unwind in style in our cozy twin room, featuring two comfortable twin-sized beds,
@@ -65,4 +63,4 @@ function Twin(props) {
 	);
 }
 
-export default Twin;
+export default memo(Twin);

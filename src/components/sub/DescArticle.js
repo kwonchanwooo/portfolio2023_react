@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 function DescArticle(props) {
 	return (
-		<article className='DescArticle'>
+		<article className='DescArticle on'>
 			<div className='right'>
 				<span>
 					Free WIFI

@@ -20,7 +20,8 @@
 				// padding-bottom: 10vh;
 
 				.swiper-pagination {
-					padding-top: 2vh;
+					position: absolute;
+					bottom: 5vh;
 				}
 				.swiper-wrapper {
 					// height: 800px;
@@ -40,7 +41,6 @@
 		}
 		.desc {
 			transform: translateY(0px);
-
 			width: 1180px;
 			margin: 0 auto;
 			display: flex;
@@ -72,4 +72,8 @@
 			}
 		}
 	}
+}
+
+:root {
+	--swiper-theme-color: rgb(207, 24, 41);
 }

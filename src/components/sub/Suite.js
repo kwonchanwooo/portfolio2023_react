@@ -1,10 +1,9 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
+import React, { memo } from 'react';
 import { EffectCoverflow, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import DescArticle from './DescArticle';
 
 function Suite(props) {
@@ -15,6 +14,7 @@ function Suite(props) {
 					<Swiper
 						effect={'coverflow'}
 						grabCursor={true}
+						loop={true}
 						centeredSlides={true}
 						slidesPerView={'auto'}
 						coverflowEffect={{
@@ -29,19 +29,22 @@ function Suite(props) {
 						className='mySwiper'
 					>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/standard/standard1.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/Suite/Suite1.jpg`} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/standard/standard2.jpg`} />{' '}
+							<img src={`${process.env.PUBLIC_URL}/img/Suite/Suite2.jpg`} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/standard/standard3.jpg`} />{' '}
+							<img src={`${process.env.PUBLIC_URL}/img/Suite/Suite3.jpg`} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/standard/standard4.jpg`} />{' '}
+							<img src={`${process.env.PUBLIC_URL}/img/Suite/Suite4.jpg`} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/standard/standard5.jpg`} />{' '}
+							<img src={`${process.env.PUBLIC_URL}/img/Suite/Suite5.jpg`} />
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src={`${process.env.PUBLIC_URL}/img/Suite/Suite6.jpg`} />
 						</SwiperSlide>
 					</Swiper>
 
@@ -66,4 +69,4 @@ function Suite(props) {
 	);
 }
 
-export default Suite;
+export default memo(Suite);

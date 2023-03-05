@@ -1,10 +1,9 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
+import React, { memo } from 'react';
 import { EffectCoverflow, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import DescArticle from './DescArticle';
 
 function Double(props) {
@@ -17,6 +16,7 @@ function Double(props) {
 						grabCursor={true}
 						centeredSlides={true}
 						slidesPerView={'auto'}
+						loop={true}
 						coverflowEffect={{
 							rotate: 50,
 							stretch: 0,
@@ -29,19 +29,22 @@ function Double(props) {
 						className='mySwiper'
 					>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/standard/standard1.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/double/double1.jpg`} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/standard/standard2.jpg`} />{' '}
+							<img src={`${process.env.PUBLIC_URL}/img/double/double2.jpg`} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/standard/standard3.jpg`} />{' '}
+							<img src={`${process.env.PUBLIC_URL}/img/double/double3.jpg`} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/standard/standard4.jpg`} />{' '}
+							<img src={`${process.env.PUBLIC_URL}/img/double/double4.jpg`} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/standard/standard5.jpg`} />{' '}
+							<img src={`${process.env.PUBLIC_URL}/img/double/double5.jpg`} />
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src={`${process.env.PUBLIC_URL}/img/double/double5.jpg`} />
 						</SwiperSlide>
 					</Swiper>
 
@@ -64,4 +67,4 @@ function Double(props) {
 	);
 }
 
-export default Double;
+export default memo(Double);
