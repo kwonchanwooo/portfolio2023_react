@@ -7,10 +7,10 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import DescArticle from './DescArticle';
 
-function RoomInner(props) {
+function Twin(props) {
 	return (
 		<section id='roomInner' className='myScroll'>
-			<section className='on'>
+			<section>
 				<div className='pic'>
 					<Swiper
 						effect={'coverflow'}
@@ -47,14 +47,14 @@ function RoomInner(props) {
 
 					<div className='desc'>
 						<div className='desctxt'>
-							<h1>Standard Room</h1>
+							<h1>Twin Room</h1>
 							<p>
-								Indulge in a comfortable stay in our well-appointed single standard room. With a
-								plush king-sized bed, flat-screen TV, and modern amenities, you'll enjoy a relaxing
-								and rejuvenating experience. The room also features breathtaking views of the city
-								or lush greenery, a mini-fridge to store your drinks and snacks, and an en-suite
-								bathroom with premium toiletries. Stay connected with complimentary Wi-Fi and
-								24-hour room service. Book now for an unforgettable stay.
+								Unwind in style in our cozy twin room, featuring two comfortable twin-sized beds,
+								flat-screen TV, and a work desk. Take in beautiful views of the city or lush
+								greenery from the room, and stay connected with complimentary Wi-Fi. The mini-fridge
+								is perfect for storing drinks and snacks, and the en-suite bathroom with premium
+								toiletries offers added comfort. Ideal for friends or family traveling together,
+								book your stay now for a memorable experience.
 							</p>
 						</div>
 						<DescArticle />
@@ -65,4 +65,4 @@ function RoomInner(props) {
 	);
 }
 
-export default RoomInner;
+export default Twin;

@@ -1,14 +1,16 @@
 import React from 'react';
 import Btns from './Btns';
-import RoomInner from './RoomInner';
-
+import Double from './Double';
+import Standard from './Standard';
+import Suite from './Suite';
+import Twin from './Twin';
 function Rooms(props) {
 	return (
 		<>
-			<RoomInner />
-			<RoomInner />
-			<RoomInner />
-			<RoomInner />
+			<Standard />
+			<Twin />
+			<Double />
+			<Suite />
 			<Btns />
 		</>
 	);

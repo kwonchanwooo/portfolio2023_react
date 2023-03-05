@@ -9,6 +9,11 @@
 	transform: rotateY(200deg) translateY(100px);
 	transition: 0.5s;
 	display: flex;
+	&.on {
+		opacity: 1;
+		transform: rotateY(0deg) translateY(0px);
+	}
+
 	&:hover {
 		@include button;
 	}
