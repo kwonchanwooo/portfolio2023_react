@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import DescArticle from './DescArticle';
 
-function Suite(props) {
+function suite(props) {
 	return (
 		<section id='roomInner' className='myScroll'>
 			<section>
@@ -29,22 +29,22 @@ function Suite(props) {
 						className='mySwiper'
 					>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/Suite/Suite1.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/suite/suite1.jpg`} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/Suite/Suite2.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/suite/suite2.jpg`} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/Suite/Suite3.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/suite/suite3.jpg`} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/Suite/Suite4.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/suite/suite4.jpg`} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/Suite/Suite5.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/suite/suite5.jpg`} />
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/Suite/Suite6.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/suite/suite6.jpg`} />
 						</SwiperSlide>
 					</Swiper>
 
@@ -57,7 +57,7 @@ function Suite(props) {
 								the ultimate in comfort and elegance. Stay connected with complimentary Wi-Fi, and
 								make use of the mini-fridge to store your drinks and snacks. The en-suite bathroom
 								with premium toiletries and a spa-like shower add an extra touch of indulgence. Book
-								your Suite room now and elevate your stay to new heights of luxury and
+								your suite room now and elevate your stay to new heights of luxury and
 								sophistication.
 							</p>
 						</div>
@@ -69,4 +69,4 @@ function Suite(props) {
 	);
 }
 
-export default memo(Suite);
+export default memo(suite);

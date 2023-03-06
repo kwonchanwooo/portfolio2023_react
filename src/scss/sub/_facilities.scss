@@ -11,7 +11,7 @@
 		padding: 10px;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: flex-end;
 
 		.searchBox {
 			input {
@@ -35,16 +35,24 @@
 
 		nav {
 			display: inline-flex;
+			width: 100%;
+			margin-top: 20px;
 
 			button {
-				width: 130px;
-				height: 28px;
+				width: 25%;
+				height: 50px;
 				border: none;
 				background: #555;
-				font: 12px/1 'arial';
+				font: 25px/25px 'inter';
 				color: #fff;
 				cursor: pointer;
-				margin-left: 5px;
+				margin-right: 5px;
+				&:last-child {
+					margin-right: 0px;
+				}
+				&.on {
+					@include button;
+				}
 			}
 		}
 	}

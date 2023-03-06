@@ -14,7 +14,10 @@ function Gallery() {
 	const [Index, setIndex] = useState(0);
 	const [Loading, setLoading] = useState(true);
 	const Items = useSelector((store) => store.flickr.data);
-
+	const [Button, setActiveButton] = useState(null);
+	const handleButtonClick = (button) => {
+		setActiveButton(button);
+	};
 	const Banquet = () => {
 		frame.current.classList.remove('on');
 		setLoading(true);
@@ -51,6 +54,8 @@ function Gallery() {
 		setLoading(true);
 		dispatch(fetchFlickr({ type: 'search', tags: result }));
 		init.current = false;
+		const buttons = document.querySelectorAll('button');
+		buttons.forEach((button) => button.classList.remove('on'));
 	};
 
 	let handleKeyUp = (e) => {
@@ -69,6 +74,10 @@ function Gallery() {
 			setLoading(false);
 		}, 500);
 	}, [Items, dispatch]);
+
+	useEffect(() => {
+		handleButtonClick('Banquet');
+	}, []);
 	return (
 		<>
 			<Layout name='Gallery'>
@@ -84,10 +93,42 @@ function Gallery() {
 					</div>
 
 					<nav>
-						<button onClick={Banquet}>Banquet</button>
-						<button onClick={Restaurant}>Restaurant</button>
-						<button onClick={Bar}>Bar</button>
-						<button onClick={Spa}>Spa</button>
+						<button
+							className={Button === 'Banquet' ? 'on' : ''}
+							onClick={() => {
+								Banquet();
+								handleButtonClick('Banquet');
+							}}
+						>
+							Banquet
+						</button>
+						<button
+							className={Button === 'Restaurant' ? 'on' : ''}
+							onClick={() => {
+								Restaurant();
+								handleButtonClick('Restaurant');
+							}}
+						>
+							Restaurant
+						</button>
+						<button
+							className={Button === 'Bar' ? 'on' : ''}
+							onClick={() => {
+								Bar();
+								handleButtonClick('Bar');
+							}}
+						>
+							Bar
+						</button>
+						<button
+							className={Button === 'Spa' ? 'on' : ''}
+							onClick={() => {
+								Spa();
+								handleButtonClick('Spa');
+							}}
+						>
+							Spa
+						</button>
 					</nav>
 				</div>
 

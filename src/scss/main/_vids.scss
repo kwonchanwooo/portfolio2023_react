@@ -1,11 +1,11 @@
 #vids {
 	width: 100%;
-	height: 900px;
+	height: 800px;
 	background: rgb(16, 16, 16);
 
 	.swiper {
 		height: 100%;
-		padding: 6vw 0px;
+		padding: 4vw 0px;
 
 		.controls {
 			position: absolute;
@@ -16,6 +16,16 @@
 			color: white;
 			font-size: 30px;
 			z-index: 100;
+			.fa-play {
+				&:hover {
+					color: rgb(207, 24, 41);
+				}
+			}
+			.fa-pause {
+				&:hover {
+					color: rgb(207, 24, 41);
+				}
+			}
 
 			svg {
 				cursor: pointer;
@@ -23,6 +33,8 @@
 				transform: scale(0.8);
 				transition: opacity 0.5s transform 0.5s;
 				&.on {
+					color: rgb(207, 24, 41);
+
 					opacity: 1;
 					transform: scale(1);
 				}
@@ -33,8 +45,8 @@
 
 			.inner {
 				width: 100%;
-				height: 100%;
-				background: #fff;
+				height: 90%;
+				background: rgb(34, 34, 34);
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: center;
@@ -44,6 +56,14 @@
 				opacity: 0.5;
 				transform: scale(0.8);
 				transition: opacity 0.5s, transform 0.5s;
+				&:hover {
+					@include button;
+					.pic {
+						img {
+							filter: grayscale(0);
+						}
+					}
+				}
 
 				.pic {
 					width: 100%;
@@ -53,15 +73,26 @@
 						width: 100%;
 						height: 100%;
 						object-fit: cover;
+						cursor: pointer;
+						filter: grayscale(100);
 					}
 				}
 				h2 {
-					font: nomral 40px/1 'inter';
-					margin-top: 15px;
+					font: bold 40px/1 'inter';
+					margin-top: 30px;
+					padding-bottom: 30px;
+					color: white;
+					text-align: center;
 				}
 				p {
+					border-top: 1px solid gray;
+
 					font: 14px/1.3 'roboto';
-					margin-top: 30px;
+					padding-top: 40px;
+					padding-bottom: 40px;
+					color: white;
+					opacity: 0.6;
+					text-align: center;
 				}
 			}
 		}
@@ -80,7 +111,7 @@
 			}
 			.swiper-pagination-bullet-active {
 				width: 40px;
-				background: red;
+				background: rgb(207, 24, 41);
 				transition: width 0.5s;
 			}
 		}
@@ -91,6 +122,9 @@
 			transform: scale(0.6);
 			color: white;
 			z-index: 100;
+			&:hover {
+				color: rgb(207, 24, 41);
+			}
 		}
 		.swiper-button-prev {
 			left: auto;
@@ -100,6 +134,9 @@
 			transform: scale(0.6);
 			color: white;
 			z-index: 100;
+			&:hover {
+				color: rgb(207, 24, 41);
+			}
 		}
 	}
 }

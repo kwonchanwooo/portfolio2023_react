@@ -101,12 +101,12 @@ function Vids() {
 									</div>
 									<h2>
 										{vid.snippet.title.length >= 30
-											? vid.snippet.title.substr(0, 40) + '...'
+											? vid.snippet.title.substr(0, 30)
 											: vid.snippet.title}
 									</h2>
 									<p>
-										{vid.snippet.description.length >= 100
-											? vid.snippet.description.substr(0, 150) + '...'
+										{vid.snippet.description.length >= 200
+											? vid.snippet.description.substr(0, 200) + '...'
 											: vid.snippet.description}
 									</p>
 								</div>

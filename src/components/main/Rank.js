@@ -1,5 +1,3 @@
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 function Rank(props) {
 	return (
@@ -7,14 +5,8 @@ function Rank(props) {
 			<div className='inner'>
 				<div className='wrap'>
 					<article>
-						<h1>
-							<FontAwesomeIcon icon={faStar} />
-							<FontAwesomeIcon icon={faStar} />
-							<FontAwesomeIcon icon={faStar} />
-							<FontAwesomeIcon icon={faStar} />
-							<FontAwesomeIcon icon={faStar} />
-						</h1>
-						<h2>5 Star Rating</h2>
+						<h1>5</h1>
+						<h2>Star Rating</h2>
 					</article>
 					<article>
 						<h1>60+</h1>

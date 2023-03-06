@@ -13,7 +13,7 @@ function Gallery(props) {
 					<article>
 						<div className='pic'></div>
 						<h2>BANQUET</h2>
-						<Link to='/facilities.html'>
+						<Link to='/facilities'>
 							VIEW MORE <FontAwesomeIcon icon={faCaretRight} />
 						</Link>
 					</article>
