@@ -44,7 +44,7 @@ function Twin({ scrolled, pos }) {
 					</Swiper>
 
 					<div className='desc'>
-						<div className='desctxt' style={{ opacity: `${pos - scrolled}` }}>
+						<div className='desctxt' style={{ opacity: `${scrolled / (pos - 1180)}` }}>
 							<h1>Twin Room</h1>
 							<p>
 								Unwind in style in our cozy twin room, featuring two comfortable twin-sized beds,

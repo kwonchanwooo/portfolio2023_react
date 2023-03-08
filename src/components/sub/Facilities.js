@@ -14,9 +14,9 @@ function Gallery() {
 	const [Index, setIndex] = useState(0);
 	const [Loading, setLoading] = useState(true);
 	const Items = useSelector((store) => store.flickr.data);
-	const [Button, setActiveButton] = useState(null);
+	const [Button, setButton] = useState(null);
 	const handleButtonClick = (button) => {
-		setActiveButton(button);
+		setButton(button);
 	};
 	const Banquet = () => {
 		frame.current.classList.remove('on');
