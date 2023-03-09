@@ -95,7 +95,7 @@
 
 @media screen and (max-width: $tablet) {
 	.About {
-		height: 1850px;
+		// height: 6000px;
 		.inner {
 			width: 100%;
 			padding: 20px 20px;
@@ -131,8 +131,13 @@
 
 @media screen and (max-width: $mobile) {
 	.About {
-		height: 2000px;
-
+		// height: 2000px;
+		h2 {
+			display: none;
+		}
+		p {
+			display: none;
+		}
 		.inner {
 			min-height: auto;
 			article {
