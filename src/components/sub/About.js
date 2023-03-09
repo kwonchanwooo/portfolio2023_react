@@ -1,4 +1,4 @@
-import { faBus, faCar, faSubway } from '@fortawesome/free-solid-svg-icons';
+import { faBus, faParking, faSubway } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -120,23 +120,51 @@ function About(props) {
 				</nav>
 				<div id='map' ref={container}></div>
 				<div className='way'>
+					{index === 0 ? (
+						<p>서울특별시 용산구 이태원1동 이태원로 179</p>
+					) : (
+						<p>대구광역시 수성구 용학로 106-7</p>
+					)}
 					<div className='bus'>
 						<div className='img'>
 							<FontAwesomeIcon icon={faBus} />
 						</div>
-						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, sint?</p>
+						{index === 0 ? (
+							<p>
+								<ul>
+									<li>해밀튼호텔 정류장 - 간선 110A, 110B, 421</li>
+									<li>보광동입구 정류장 - 간선 400, 405, 421</li>
+									<li>이태원역앞 정류장 - 용산01</li>
+								</ul>
+							</p>
+						) : (
+							<p>
+								<ul>
+									<li>수성못 건너역 정류장 - 401, 814</li>
+									<li>불교한방병원 정류장 - 410</li>
+								</ul>
+							</p>
+						)}
 					</div>
 					<div className='train'>
 						<div className='img'>
 							<FontAwesomeIcon icon={faSubway} />
 						</div>
-						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, sint?</p>
+						{index === 0 ? (
+							<p>6호선 이태원역 1, 2번 출구 도보 1분</p>
+						) : (
+							<p>3호선 수성못(TBC)역 2번출구 도보 15분 </p>
+						)}
 					</div>
 					<div className='car'>
 						<div className='img'>
-							<FontAwesomeIcon icon={faCar} />
+							<FontAwesomeIcon icon={faParking} />
 						</div>
-						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, sint?</p>
+						{index === 0 ? (
+							<p>객실 투숙객은 객실당 차량 1대만 무료로 이용 가능</p>
+						) : (
+							<p>객실 투숙객은 객실당 차량 1대만 무료로 이용 가능</p>
+						)}
 					</div>
 				</div>
 			</div>

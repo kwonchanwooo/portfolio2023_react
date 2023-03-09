@@ -33,6 +33,12 @@
 		}
 	}
 	.way {
+		> p {
+			@include red;
+			font: bold 20px/1 'roboto';
+			text-align: center;
+			margin-bottom: 50px;
+		}
 		margin-top: 30px;
 		display: flex;
 		flex-direction: column;
@@ -55,11 +61,13 @@
 				}
 			}
 			p {
+				width: 100%;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				color: #999;
-				font: 20px/1 'roboto';
+				font: 20px/2 'roboto';
+				text-align: left;
 			}
 		}
 		.train {
@@ -81,11 +89,13 @@
 				}
 			}
 			p {
+				width: 100%;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				color: #999;
 				font: 20px/1 'roboto';
+				text-align: left;
 			}
 		}
 		.car {
@@ -98,13 +108,15 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				.fa-car {
+				.fa-square-parking {
 					width: 100px;
 					color: white;
 					font: 100px/1 'arial';
 				}
 			}
 			p {
+				width: 100%;
+
 				display: flex;
 				justify-content: center;
 				align-items: center;
