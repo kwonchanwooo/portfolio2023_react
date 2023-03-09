@@ -3,6 +3,10 @@ import { useHistory } from 'react-router-dom';
 import Layout from '../commoon/Layout';
 
 function Join(props) {
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}, []);
+
 	const history = useHistory();
 	const initVal = {
 		userid: '',
