@@ -46,11 +46,7 @@ function Menu() {
 								Video
 							</NavLink>
 						</li>
-						<li>
-							<NavLink to='/location' activeStyle={active}>
-								Location
-							</NavLink>
-						</li>
+
 						<li>
 							<NavLink to='/rooms' activeStyle={active}>
 								Rooms

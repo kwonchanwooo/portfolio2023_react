@@ -1,3 +1,5 @@
+import { faBus, faCar, faSubway } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Layout from '../commoon/Layout';
@@ -99,7 +101,6 @@ function About(props) {
 					transportation options that you can easily access from the hotel. If you want to know more
 					about the location, please check out the map below.
 				</p>
-				<div id='map' ref={container}></div>
 				<nav>
 					<ul className='branch'>
 						{info.current.map((el, idx) => {
@@ -117,6 +118,27 @@ function About(props) {
 						})}
 					</ul>
 				</nav>
+				<div id='map' ref={container}></div>
+				<div className='way'>
+					<div className='bus'>
+						<div className='img'>
+							<FontAwesomeIcon icon={faBus} />
+						</div>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, sint?</p>
+					</div>
+					<div className='train'>
+						<div className='img'>
+							<FontAwesomeIcon icon={faSubway} />
+						</div>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, sint?</p>
+					</div>
+					<div className='car'>
+						<div className='img'>
+							<FontAwesomeIcon icon={faCar} />
+						</div>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, sint?</p>
+					</div>
+				</div>
 			</div>
 		</Layout>
 	);
