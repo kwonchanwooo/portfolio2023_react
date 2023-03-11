@@ -1,7 +1,14 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useSelector } from 'react-redux';
+import SwiperCore, { Navigation } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import Layout from '../commoon/Layout';
-
+import Modal from '../commoon/Modal';
+SwiperCore.use([Navigation]);
 function About(props) {
 	const [Member, setMember] = useState([]);
 	useEffect(() => {
@@ -11,36 +18,104 @@ function About(props) {
 	}, []);
 	useEffect(() => {}, [Member]);
 
+	const [index, setIndex] = useState(0);
+	const open = useRef(null);
+
+	const vids = useSelector((store) => store.video.data);
+
 	return (
-		<Layout name={'About'}>
-			<h2>Team COZY를 소개합니다.</h2>
-			<h2>Je vous présente Team COZY.</h2>
-			<h1>Let me introduce Team COZY.</h1>
-			<h2>Team COZYを紹介します。</h2>
-			<h2>介绍一下Team COZY。</h2>
-			<p>
-				Hello. This page introduces the hotel executives. The executives are at the forefront of the
-				hotel industry with their expertise and experience. The executives operate and manage
-				various hotels around the world, and strive to provide the best service and comfort to
-				customers. The executives play a big role in shaping the future of the hotel industry. If
-				you want to know more about them, please click on their profiles below.
-			</p>
-			{Member.map((el, index) => {
-				return (
-					<article key={index}>
-						<div className='inner'>
-							<div className='pic'>
-								<img src={`${process.env.PUBLIC_URL}/img/${el.pic}`} alt={el.name} />
+		<>
+			<Layout name={'About'}>
+				<h2>Team COZY를 소개합니다.</h2>
+				<h2>Je vous présente Team COZY.</h2>
+				<h1>Let me introduce Team COZY.</h1>
+				<h2>Team COZYを紹介します。</h2>
+				<h2>介绍一下Team COZY。</h2>
+				<p>
+					Hello. This page introduces the hotel executives. The executives are at the forefront of
+					the hotel industry with their expertise and experience. The executives operate and manage
+					various hotels around the world, and strive to provide the best service and comfort to
+					customers. The executives play a big role in shaping the future of the hotel industry. If
+					you want to know more about them, please click on their profiles below.
+				</p>
+				{/* {Member.map((el, index) => {
+					return (
+						<article key={index}>
+							<div className='inner'>
+								<div className='pic'>
+									<img src={`${process.env.PUBLIC_URL}/img/${el.pic}`} alt={el.name} />
+								</div>
+								<div className='txt'>
+									<h3>{el.name}</h3>
+									<p>{el.position}</p>
+								</div>
 							</div>
-							<div className='txt'>
-								<h3>{el.name}</h3>
-								<p>{el.position}</p>
-							</div>
-						</div>
-					</article>
-				);
-			})}
-		</Layout>
+						</article>
+					);
+				})} */}
+				<Swiper
+					spaceBetween={10}
+					slidesPerView={4}
+					height={500}
+					loop={true}
+					modules={Navigation}
+					navigation={true}
+				>
+					{Member.map((el, idx) => {
+						return (
+							<SwiperSlide key={idx}>
+								<article key={index}>
+									<div className='inner'>
+										<div className='pic'>
+											<img src={`${process.env.PUBLIC_URL}/img/${el.pic}`} alt={el.name} />
+										</div>
+										<div className='txt'>
+											<h3>{el.name}</h3>
+											<p>{el.position}</p>
+										</div>
+									</div>
+								</article>
+							</SwiperSlide>
+						);
+					})}
+				</Swiper>
+			</Layout>
+			<div className='Video'>
+				<div className='inner'>
+					{vids.map((el, index) => {
+						const tit = el.snippet.title;
+						const desc = el.snippet.description;
+						const date = el.snippet.publishedAt;
+
+						return (
+							<article key={el.id}>
+								<div
+									className='pic'
+									onClick={() => {
+										open.current.setOpen();
+										setIndex(index);
+									}}
+								>
+									<img src={el.snippet.thumbnails.high.url} alt={el.snippet.title} />
+									<div className='txt'>
+										<h3>{tit.length > 26 ? tit.substr(0, 26) + '...' : tit}</h3>
+										<p>{desc.length > 80 ? desc.substr(0, 80) + '...' : desc}</p>
+										<span>{date.split('T')[0]}</span>
+									</div>
+								</div>
+							</article>
+						);
+					})}
+
+					<Modal ref={open}>
+						<iframe
+							title={vids[index]?.id}
+							src={`https://www.youtube.com/embed/${vids[index]?.snippet.resourceId.videoId}`}
+						></iframe>
+					</Modal>
+				</div>
+			</div>
+		</>
 	);
 }
 

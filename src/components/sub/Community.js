@@ -1,4 +1,12 @@
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import {
+	faBus,
+	faCar,
+	faEnvelope,
+	faLocationDot,
+	faPhone,
+	faSubway,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import Layout from '../commoon/Layout';
@@ -88,15 +96,15 @@ function Community() {
 			title: '서울 이태원점',
 			latlng: new kakao.maps.LatLng(37.5347906, 126.9935937),
 			imgUrl: `${process.env.PUBLIC_URL}/img/marker.png`,
-			imgSize: new kakao.maps.Size(255, 107),
-			imgPos: { offset: new kakao.maps.Point(120, 100) },
+			imgSize: new kakao.maps.Size(200, 80),
+			imgPos: { offset: new kakao.maps.Point(100, 80) },
 		},
 		{
 			title: '대구 수성못점',
 			latlng: new kakao.maps.LatLng(35.8252327, 128.6203849),
 			imgUrl: `${process.env.PUBLIC_URL}/img/marker.png`,
-			imgSize: new kakao.maps.Size(255, 107),
-			imgPos: { offset: new kakao.maps.Point(120, 100) },
+			imgSize: new kakao.maps.Size(200, 80),
+			imgPos: { offset: new kakao.maps.Point(100, 80) },
 		},
 	];
 
@@ -178,6 +186,7 @@ function Community() {
 			</div>
 			<div className='box'>
 				<div className='inputBox'>
+					<h2>Post</h2>
 					<input type='text' placeholder='제목을 입력하세요' ref={input} />
 					<br />
 					<textarea cols='30' rows='3' placeholder='본문을 입력하세요.' ref={textarea}></textarea>
@@ -198,48 +207,83 @@ function Community() {
 							<p>대구광역시 수성구 용학로 106-7</p>
 						)}
 					</div>
+					<div className='adr'>
+						<FontAwesomeIcon icon={faEnvelope} />
+						{index === 0 ? <p> cozyitaewon@abcde.net</p> : <p> cozysuseongmot@cdefg.com</p>}
+					</div>{' '}
+					<div className='adr'>
+						<FontAwesomeIcon icon={faPhone} />
+						{index === 0 ? <p> +82 0212345678</p> : <p>+82 0531234567</p>}
+					</div>{' '}
+					<div className='adr'>
+						<FontAwesomeIcon icon={faInstagram} />
+						{index === 0 ? <p> @thecozyITW</p> : <p> @thecozyDG</p>}
+					</div>
+					<div className='link'>
+						{index === 0 ? (
+							<ul>
+								<a
+									href='https://map.naver.com/v5/directions/-/14136867.238596726,4513924.09001781,%ED%95%B4%EB%B0%80%ED%86%A4%20%ED%98%B8%ED%85%94,11579381,PLACE_POI/-/transit?c=15,0,0,0,dh'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									<li>
+										<FontAwesomeIcon icon={faBus} />
+									</li>
+								</a>
+								<a
+									href='https://map.naver.com/v5/directions/-/14136867.238596726,4513924.09001781,%ED%95%B4%EB%B0%80%ED%86%A4%20%ED%98%B8%ED%85%94,11579381,PLACE_POI/-/transit?c=15,0,0,0,dh'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									<li>
+										<FontAwesomeIcon icon={faSubway} />
+									</li>
+								</a>
 
-					{/* <div className='bus'>
-						<div className='img'>
-							<FontAwesomeIcon icon={faBus} />
-						</div>
-						{index === 0 ? (
-							<p>
-								<ul>
-									<li>해밀튼호텔 정류장 - 간선 110A, 110B, 421</li>
-									<li>보광동입구 정류장 - 간선 400, 405, 421</li>
-									<li>이태원역앞 정류장 - 용산01</li>
-								</ul>
-							</p>
+								<a
+									href='https://map.naver.com/v5/directions/-/14136867.238613646,4513924.090092534,%ED%95%B4%EB%B0%80%ED%86%A4%20%ED%98%B8%ED%85%94,11579381,PLACE_POI/-/car?c=15,0,0,0,dh'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									<li>
+										<FontAwesomeIcon icon={faCar} />
+									</li>
+								</a>
+							</ul>
 						) : (
-							<p>
-								<ul>
-									<li>수성못 건너역 정류장 - 401, 814</li>
-									<li>불교한방병원 정류장 - 410</li>
-								</ul>
-							</p>
+							<ul>
+								<a
+									href='https://map.naver.com/v5/directions/-/14317822.035730485,4276402.693211922,%ED%98%B8%ED%85%94%EC%88%98%EC%84%B1,11658960,PLACE_POI/-/transit?c=15,0,0,0,dh'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									<li>
+										<FontAwesomeIcon icon={faBus} />
+									</li>
+								</a>
+								<a
+									href='https://map.naver.com/v5/directions/-/14317822.035730485,4276402.693211922,%ED%98%B8%ED%85%94%EC%88%98%EC%84%B1,11658960,PLACE_POI/-/transit?c=15,0,0,0,dh'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									<li>
+										<FontAwesomeIcon icon={faSubway} />
+									</li>
+								</a>
+
+								<a
+									href='https://map.naver.com/v5/directions/-/14317822.035785254,4276402.693350356,%ED%98%B8%ED%85%94%EC%88%98%EC%84%B1,11658960,PLACE_POI/-/car?c=15,0,0,0,dh'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									<li>
+										<FontAwesomeIcon icon={faCar} />
+									</li>
+								</a>
+							</ul>
 						)}
 					</div>
-					<div className='train'>
-						<div className='img'>
-							<FontAwesomeIcon icon={faSubway} />
-						</div>
-						{index === 0 ? (
-							<p>6호선 이태원역 1, 2번 출구 도보 1분</p>
-						) : (
-							<p>3호선 수성못(TBC)역 2번출구 도보 15분 </p>
-						)}
-					</div>
-					<div className='car'>
-						<div className='img'>
-							<FontAwesomeIcon icon={faParking} />
-						</div>
-						{index === 0 ? (
-							<p>객실 투숙객은 객실당 차량 1대만 무료로 이용 가능</p>
-						) : (
-							<p>객실 투숙객은 객실당 차량 1대만 무료로 이용 가능</p>
-						)}
-					</div> */}
 				</div>
 			</div>
 
@@ -268,6 +312,7 @@ function Community() {
 							) : (
 								<>
 									<div className='txt'>
+										<span>{idx + 1}번째 글</span>
 										<h2>{post.title}</h2>
 										<p>{post.content}</p>
 									</div>

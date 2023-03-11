@@ -1,6 +1,6 @@
 .About {
 	width: 100%;
-	height: 2000px;
+
 	background: rgb(23, 23, 23);
 
 	.inner {
@@ -21,71 +21,78 @@
 		> p {
 			margin-top: 70px;
 		}
-		article {
-			float: left;
-			width: 280px;
-			height: 400px;
-			background: rgb(16, 16, 16);
-			margin-right: 20px;
-			margin-bottom: 20px;
-			z-index: 5;
-			position: relative;
-			&:nth-of-type(4) {
-				margin-right: 0px;
-			}
-			&:nth-of-type(8) {
-				margin-right: 0px;
-			}
+		.swiper {
+			padding-top: 40px;
+			padding-bottom: 40px;
 
-			.inner {
-				width: 100%;
-				display: flex;
-				flex-direction: column;
-				margin: 0 auto;
+			article {
+				float: left;
+				width: 280px;
+				height: 400px;
+				background: rgb(16, 16, 16);
+				margin-right: 20px;
+				margin-bottom: 20px;
+				z-index: 5;
+				position: relative;
+				&:nth-of-type(4) {
+					margin-right: 0px;
+				}
+				&:nth-of-type(8) {
+					margin-right: 0px;
+				}
 
-				.pic {
+				.inner {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
 					margin: 0 auto;
-					filter: grayscale(100);
-					img {
-						box-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
-						margin: 20px 0;
-						object-fit: cover;
-						width: 240px;
-						height: 240px;
-						background: #fff;
-						border-radius: 50%;
-					}
-				}
-				.txt {
-					color: #fff;
-					font-family: 'roboto';
-					text-align: center;
-					margin-top: 20px;
-					letter-spacing: 1px;
-					h3 {
-						font: 24px 'roboto';
-						@include red;
-						margin-top: -10px;
-					}
-					p {
-						font-size: 15px;
-						margin-top: 20px;
-						color: #999;
-					}
-				}
-			}
 
-			&:hover {
-				@include button;
-				.pic {
-					filter: grayscale(0);
-				}
-				.txt {
-					h3 {
-						color: #fff;
+					.pic {
+						margin: 0 auto;
+						filter: grayscale(100);
+						img {
+							box-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
+							margin: 20px 0;
+							object-fit: cover;
+							width: 240px;
+							height: 240px;
+							background: #fff;
+							border-radius: 50%;
+						}
 					}
-					p {
+					.txt {
 						color: #fff;
+						font-family: 'roboto';
+						text-align: center;
+						margin-top: 20px;
+						letter-spacing: 1px;
+						h3 {
+							font: 24px 'roboto';
+							@include red;
+							margin-top: -10px;
+						}
+						p {
+							font-size: 15px;
+							margin-top: 20px;
+							color: #999;
+						}
+					}
+				}
+
+				&:hover {
+					@include button;
+					transform: translateY(-5px);
+					transition: 0.5s;
+					.pic {
+						filter: grayscale(0);
+					}
+					.txt {
+						h3 {
+							color: #fff;
+						}
+						p {
+							color: #fff;
+						}
 					}
 				}
 			}
@@ -129,6 +136,30 @@
 	}
 }
 
+//swiper
+.swiper-button-next {
+	right: 60px;
+	top: auto;
+	bottom: 0px;
+	transform: scale(0.6);
+	color: white;
+	z-index: 100;
+	&:hover {
+		color: rgb(207, 24, 41);
+	}
+}
+.swiper-button-prev {
+	left: auto;
+	right: 100px;
+	top: auto;
+	bottom: 0px;
+	transform: scale(0.6);
+	color: white;
+	z-index: 100;
+	&:hover {
+		color: rgb(207, 24, 41);
+	}
+}
 @media screen and (max-width: $mobile) {
 	.About {
 		// height: 2000px;

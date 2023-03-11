@@ -7,10 +7,18 @@
 			flex-direction: row;
 			.inputBox {
 				margin-right: 5%;
-				width: 50%;
+				margin-left: 5%;
+				width: 60%;
 				height: 430px;
 				padding: 50px;
+				padding-top: 20px;
 				margin-bottom: 50px;
+				h2 {
+					color: #999;
+					font-size: 30px;
+					text-align: center;
+					margin-bottom: 30px;
+				}
 
 				input[type='text'],
 				textarea {
@@ -43,17 +51,25 @@
 				}
 			}
 			.way {
-				@include button;
-				width: 45%;
+				background: rgb(32, 32, 32);
+				width: 40%;
 				height: 430px;
-				padding: 70px;
+				padding: 50px;
 				margin-bottom: 50px;
 				display: flex;
 				flex-direction: column;
+				&:hover {
+					@include button;
+					transform: translateX(-5px) translateY(-5px);
+					transition: 0.5s;
+					h2 {
+						color: white;
+					}
+				}
 				h2 {
 					font: bold 25px/1 'roboto';
-					color: white;
-					margin-bottom: 20px;
+					@include red;
+					margin-bottom: 40px;
 				}
 				.adr {
 					display: flex;
@@ -61,97 +77,43 @@
 					justify-content: flex-start;
 					height: 50px;
 					> p {
-						font: bold 20px/1 'roboto';
+						font: bold 15px/1 'roboto';
 						color: white;
-						opacity: 0.9;
+						opacity: 0.5;
 					}
-					.fa-location-dot {
+					.fa-location-dot,
+					.fa-envelope,
+					.fa-phone,
+					.fa-instagram {
 						font: bold 20px/1 'roboto';
 						color: white;
 						margin-right: 30px;
-						// width: 10%;
+						width: 20px;
 					}
 				}
-
-				.bus {
-					display: flex;
-					flex-direction: row;
-					border-bottom: 1px solid #666;
-
-					height: 200px;
-					.img {
-						width: 30%;
+				.link {
+					ul {
+						margin-top: 20px;
 						display: flex;
-						justify-content: center;
-						align-items: center;
-						.fa-bus {
-							width: 100px;
-							color: white;
-							font: 100px/1 'arial';
+						flex-direction: row;
+						justify-content: space-evenly;
+					}
+					a {
+						color: white;
+						font-size: 25px;
+						line-height: 30px;
+						li {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							width: 60px;
+							height: 60px;
+							background: rgb(23, 23, 23);
+							border-radius: 50%;
+							&:hover {
+								@include red;
+							}
 						}
-					}
-					p {
-						width: 100%;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						color: #999;
-						font: 20px/2 'roboto';
-						text-align: left;
-					}
-				}
-				.train {
-					border-bottom: 1px solid #666;
-
-					display: flex;
-					flex-direction: row;
-					height: 200px;
-					.img {
-						width: 30%;
-
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						.fa-train-subway {
-							width: 100px;
-							color: white;
-							font: 100px/1 'arial';
-						}
-					}
-					p {
-						width: 100%;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						color: #999;
-						font: 20px/1 'roboto';
-						text-align: left;
-					}
-				}
-				.car {
-					display: flex;
-					border-bottom: 1px solid #666;
-					flex-direction: row;
-					height: 200px;
-					.img {
-						width: 30%;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						.fa-square-parking {
-							width: 100px;
-							color: white;
-							font: 100px/1 'arial';
-						}
-					}
-					p {
-						width: 100%;
-
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						color: #999;
-						font: 20px/1 'roboto';
 					}
 				}
 			}
@@ -159,12 +121,20 @@
 
 		.showBox {
 			width: 100%;
-			border: 1px solid #bbb;
-			padding: 50px;
+			border-top: 1px solid #bbb;
+
+			display: flex;
+			justify-content: space-between;
+
+			flex-wrap: wrap;
+			margin-right: 5%;
 			:hover {
 				@include button;
 				color: white;
 				.btnSet {
+					&:hover {
+						box-shadow: auto;
+					}
 					button {
 						&:nth-of-type(2) {
 							color: lightblue;
@@ -174,27 +144,58 @@
 			}
 
 			article {
+				margin-top: 50px;
 				background: rgb(32, 32, 32);
+				width: calc(100% / 3.3);
+				height: 300px;
 				padding: 30px;
 				margin-bottom: 40px;
 				display: flex;
 				justify-content: space-between;
 				align-content: center;
 				flex-wrap: wrap;
-
+				flex-direction: column;
+				box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+				&:hover {
+					transform: translateX(-5px) translateY(-5px);
+					transition: 0.5s;
+				}
 				.txt {
 					width: 88%;
 					color: white;
+					input[type='text'] {
+						margin-top: 50px;
+						width: 100%;
+						background: #bbb;
+						padding: 10px;
+					}
+					textarea {
+						margin-top: 10px;
+						background: #bbb;
+						resize: none;
+						padding: 10px;
+						width: 100%;
+						&:hover {
+							background: #bbb;
+						}
+					}
 					:hover {
 						@include button;
+
+						input[type='text'] {
+							background: #bbb;
+						}
+						textarea {
+							background: #bbb;
+						}
 					}
 					h2 {
+						margin-top: 50px;
 						margin-bottom: 10px;
 					}
 				}
 
 				.btnSet {
-					width: 10%;
 					display: flex;
 					align-items: center;
 					justify-content: flex-end;

@@ -23,6 +23,8 @@
 				margin-right: 20px;
 				&:hover {
 					background: linear-gradient(90deg, rgb(126, 19, 26), rgb(196, 30, 40));
+					transform: translateY(-5px);
+					transition: 0.5s;
 					.pic {
 						font-size: 60px;
 						.fa-couch,
@@ -142,6 +144,7 @@
 					height: 300px;
 					&:hover {
 						background: linear-gradient(90deg, rgb(126, 19, 26), rgb(196, 30, 40));
+
 						.pic {
 							width: 60px;
 							height: 60px;

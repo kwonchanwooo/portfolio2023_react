@@ -22,6 +22,8 @@
 			}
 			&:hover {
 				@include button;
+				transform: translateY(-5px);
+				transition: 0.5s;
 				.pic {
 					img {
 						filter: grayscale(0);

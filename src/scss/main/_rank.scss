@@ -63,6 +63,8 @@
 					}
 					&:hover {
 						@include button;
+						transform: translateY(-5px);
+						transition: 0.5s;
 						h1 {
 							color: white;
 						}
@@ -79,6 +81,8 @@
 					}
 					&:hover {
 						@include button;
+						transform: translateY(-5px);
+						transition: 0.5s;
 						h1 {
 							color: white;
 						}
@@ -97,6 +101,8 @@
 					}
 					&:hover {
 						@include button;
+						transform: translateY(-5px);
+						transition: 0.5s;
 						h1 {
 							color: white;
 						}
@@ -113,6 +119,8 @@
 					}
 					&:hover {
 						@include button;
+						transform: translateY(-5px);
+						transition: 0.5s;
 						h1 {
 							color: white;
 						}
