@@ -155,9 +155,9 @@ function Community() {
 	}, [index, kakao, mapTypeControl, marker, zoomControl]);
 
 	return (
-		<Layout name={'Community'}>
+		<Layout name={'Contact'}>
 			<div className='Location'>
-				<h1>Location</h1>
+				<h1>Contact Us</h1>
 				<p>
 					Hello. This page introduces the hotel location. The hotel is situated in a convenient
 					location, with many attractions and shopping malls nearby. We also introduce you to the

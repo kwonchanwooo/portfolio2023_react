@@ -2,7 +2,17 @@
 	width: 100%;
 
 	background: rgb(23, 23, 23);
+	> figure {
+		background: url(../../../public/img/layout/about.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position-y: bottom;
+		filter: grayscale(100);
 
+		&:hover {
+			filter: grayscale(0);
+		}
+	}
 	.inner {
 		width: 1180px;
 		> h1 {
@@ -12,7 +22,7 @@
 			}
 		}
 		h2 {
-			font: bold 50px/1 'inter';
+			font: bold 45px/1 'inter';
 			color: #fff;
 			opacity: 0.2;
 			text-align: center;

@@ -3,11 +3,33 @@
 
 	> figure {
 		width: 100%;
-		height: 300px;
+		height: 400px;
 		background: #bbb;
 		opacity: 0;
 		transition-property: opacity;
 		transition-duration: 1s;
+		display: flex;
+		justify-content: center;
+
+		> h1 {
+			color: white;
+			font: 45px 'roboto';
+			top: 50px;
+			position: absolute;
+			padding-right: 20px;
+			padding-left: 20px;
+			text-align: center;
+			display: block;
+			background: rgba(0, 0, 0, 0.5);
+			opacity: 1;
+			transition: 0.2s linear;
+		}
+		&:hover {
+			h1 {
+				transform: translateY(-50px);
+				opacity: 0;
+			}
+		}
 	}
 	> .inner {
 		width: 1180px;

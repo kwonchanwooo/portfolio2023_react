@@ -38,21 +38,7 @@ function About(props) {
 					customers. The executives play a big role in shaping the future of the hotel industry. If
 					you want to know more about them, please click on their profiles below.
 				</p>
-				{/* {Member.map((el, index) => {
-					return (
-						<article key={index}>
-							<div className='inner'>
-								<div className='pic'>
-									<img src={`${process.env.PUBLIC_URL}/img/${el.pic}`} alt={el.name} />
-								</div>
-								<div className='txt'>
-									<h3>{el.name}</h3>
-									<p>{el.position}</p>
-								</div>
-							</div>
-						</article>
-					);
-				})} */}
+
 				<Swiper
 					spaceBetween={10}
 					slidesPerView={4}
@@ -82,6 +68,17 @@ function About(props) {
 			</Layout>
 			<div className='Video'>
 				<div className='inner'>
+					<h2>호텔의 비디오를 구경하세요.</h2> <h2>Regardez la vidéo de l’hôtel.</h2>
+					<h1>Watch our video.</h1> <h2>ホテルのビデオを見てください。</h2>
+					<h2>观看酒店视频。</h2>
+					<p>
+						Welcome to our hotel video section. Here you can watch videos of our rooms, facilities,
+						services and more. Enjoy your virtual tour and book your stay with us today! You will
+						see why our hotel is the perfect choice for your travel needs. Whether you are looking
+						for a relaxing getaway, a business trip or a family vacation, we have something for
+						everyone. Our hotel video section will show you the quality and comfort that await you
+						at our hotel.
+					</p>
 					{vids.map((el, index) => {
 						const tit = el.snippet.title;
 						const desc = el.snippet.description;
@@ -106,7 +103,6 @@ function About(props) {
 							</article>
 						);
 					})}
-
 					<Modal ref={open}>
 						<iframe
 							title={vids[index]?.id}

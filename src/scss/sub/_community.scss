@@ -1,5 +1,16 @@
-.Community {
+.Contact {
 	background: rgb(23, 23, 23);
+	> figure {
+		background: url(../../../public/img/layout/contact.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position-y: center;
+		filter: grayscale(100);
+
+		&:hover {
+			filter: grayscale(0);
+		}
+	}
 	> .inner {
 		.box {
 			margin-top: 50px;
@@ -60,7 +71,7 @@
 				flex-direction: column;
 				&:hover {
 					@include button;
-					transform: translateX(-5px) translateY(-5px);
+					transform: translateY(-5px);
 					transition: 0.5s;
 					h2 {
 						color: white;

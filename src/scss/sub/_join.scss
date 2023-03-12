@@ -10,7 +10,16 @@
 	margin: 0 auto;
 	background: rgb(29, 29, 29);
 	padding-top: 80px;
-
+	> figure {
+		background: url(../../../public/img/layout/join.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position-y: center;
+		filter: grayscale(100);
+		&:hover {
+			filter: grayscale(0);
+		}
+	}
 	> .inner {
 		width: 1180px;
 		margin: 0 auto;

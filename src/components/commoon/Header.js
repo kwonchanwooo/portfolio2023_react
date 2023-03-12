@@ -2,7 +2,7 @@ import { faBars, faHotel } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { memo } from 'react';
 import { useDispatch } from 'react-redux';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { toggle } from '../../redux/menuSlice';
 function Header(props) {
 	const dispatch = useDispatch();
@@ -18,30 +18,30 @@ function Header(props) {
 					</h1>
 					<ul id='gnb'>
 						<li>
-							<NavLink to='/about' activeStyle={active}>
+							<Link to='/about' activeStyle={active}>
 								About
-							</NavLink>
+							</Link>
 						</li>
 
 						<li>
-							<NavLink to='/rooms' activeStyle={active}>
+							<Link to='/rooms' activeStyle={active}>
 								Rooms
-							</NavLink>
+							</Link>
 						</li>
 						<li>
-							<NavLink to='/facilities' activeStyle={active}>
+							<Link to='/facilities' activeStyle={active}>
 								Facilities
-							</NavLink>
+							</Link>
 						</li>
 						<li>
-							<NavLink to='/community' activeStyle={active}>
-								Community
-							</NavLink>
+							<Link to='/community' activeStyle={active}>
+								Contact
+							</Link>
 						</li>
 						<li>
-							<NavLink to='/join' activeStyle={active}>
+							<Link to='/join' activeStyle={active}>
 								Join
-							</NavLink>
+							</Link>
 						</li>
 					</ul>
 					<FontAwesomeIcon icon={faBars} onClick={() => dispatch(toggle())} />

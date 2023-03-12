@@ -7,6 +7,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
 import { close } from '../../redux/menuSlice';
+
 function Menu() {
 	const dispatch = useDispatch();
 	const menu = useSelector((store) => store.menu.open);
@@ -30,7 +31,6 @@ function Menu() {
 				>
 					<h1>
 						<Link to='/'>
-							{' '}
 							<FontAwesomeIcon icon={faHotel} />
 						</Link>
 					</h1>
@@ -54,7 +54,7 @@ function Menu() {
 						</li>
 						<li>
 							<NavLink to='/community' activeStyle={active}>
-								Community
+								Contact
 							</NavLink>
 						</li>
 						<li>

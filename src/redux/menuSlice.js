@@ -7,7 +7,7 @@ export const menuSlice = createSlice({
 	},
 	reducers: {
 		close: (state) => {
-			state.opne = false;
+			state.open = false;
 		},
 		toggle: (state) => {
 			state.open = !state.open;
