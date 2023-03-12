@@ -30,6 +30,7 @@
 		}
 		> p {
 			margin-top: 70px;
+			text-align: right;
 		}
 		.swiper {
 			padding-top: 40px;
@@ -112,32 +113,24 @@
 
 @media screen and (max-width: $tablet) {
 	.About {
-		height: 3000px;
 		.inner {
 			width: 100%;
 			padding: 20px 20px;
+			h2 {
+				font-size: 30px;
+			}
+			.swiper {
+				article {
+					width: 100%;
+					margin-right: 2%;
 
-			article {
-				width: 32%;
-				margin-right: 2%;
-				&:nth-of-type(3) {
-					margin-right: 0px;
-				}
-				&:nth-of-type(4) {
-					margin-right: 2%;
-				}
-				&:nth-of-type(5) {
-					margin-right: 2%;
-				}
-				&:nth-of-type(6) {
-					float: left;
-					margin-right: 0px;
-				}
-				.inner {
-					.pic {
-						img {
-							width: 25vw;
-							height: 25vw;
+					.inner {
+						width: 100%;
+						.pic {
+							img {
+								width: 20vw;
+								height: 20vw;
+							}
 						}
 					}
 				}
@@ -172,39 +165,25 @@
 }
 @media screen and (max-width: $mobile) {
 	.About {
-		// height: 2000px;
-		h2 {
-			display: none;
-		}
-		p {
-			display: none;
-		}
 		.inner {
-			min-height: auto;
-			article {
-				height: 150px;
-				width: 100%;
-
-				.inner {
-					height: 100%;
-
-					display: flex;
-					flex-direction: row;
-					.pic {
+			width: 100%;
+			padding: 20px 20px;
+			h2 {
+				font-size: 30px;
+			}
+			.swiper {
+				article {
+					width: 100%;
+					height: 350px;
+					.inner {
+						width: 100%;
 						height: 100%;
-						margin: 0 auto;
-						img {
-							height: 100%;
-							width: 100%;
-							margin: 0 auto;
+						.pic {
+							img {
+								width: 35vw;
+								height: 35vw;
+							}
 						}
-					}
-					.txt {
-						width: 60%;
-						display: flex;
-						flex-direction: column;
-						justify-content: center;
-						margin-top: 0;
 					}
 				}
 			}

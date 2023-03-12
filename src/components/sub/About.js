@@ -31,13 +31,6 @@ function About(props) {
 				<h1>Let me introduce Team COZY.</h1>
 				<h2>Team COZYを紹介します。</h2>
 				<h2>介绍一下Team COZY。</h2>
-				<p>
-					Hello. This page introduces the hotel executives. The executives are at the forefront of
-					the hotel industry with their expertise and experience. The executives operate and manage
-					various hotels around the world, and strive to provide the best service and comfort to
-					customers. The executives play a big role in shaping the future of the hotel industry. If
-					you want to know more about them, please click on their profiles below.
-				</p>
 
 				<Swiper
 					spaceBetween={10}
@@ -46,6 +39,20 @@ function About(props) {
 					loop={true}
 					modules={Navigation}
 					navigation={true}
+					breakpoints={{
+						1180: {
+							slidesPerView: 4,
+							spaceBetween: 10,
+						},
+						900: {
+							slidesPerView: 3,
+							spaceBetween: 10,
+						},
+						200: {
+							slidesPerView: 1,
+							spaceBetween: 10,
+						},
+					}}
 				>
 					{Member.map((el, idx) => {
 						return (
@@ -65,12 +72,22 @@ function About(props) {
 						);
 					})}
 				</Swiper>
+				<p>
+					This page introduces the hotel executives. The executives are at the forefront of the
+					hotel industry with their expertise and experience. The executives operate and manage
+					various hotels around the world, and strive to provide the best service and comfort to
+					customers. The executives play a big role in shaping the future of the hotel industry. If
+					you want to know more about them, please click on their profiles below.
+				</p>
 			</Layout>
+
 			<div className='Video'>
 				<div className='inner'>
-					<h2>호텔의 비디오를 구경하세요.</h2> <h2>Regardez la vidéo de l’hôtel.</h2>
-					<h1>Watch our video.</h1> <h2>ホテルのビデオを見てください。</h2>
-					<h2>观看酒店视频。</h2>
+					{/* <h2>호텔의 비디오를 구경하세요.</h2>
+					<h2>Regardez la vidéo de l’hôtel.</h2> */}
+					<h1>Watch our video.</h1>
+					{/* <h2>ホテルのビデオを見てください。</h2>
+					<h2>观看酒店视频。</h2> */}
 					<p>
 						Welcome to our hotel video section. Here you can watch videos of our rooms, facilities,
 						services and more. Enjoy your virtual tour and book your stay with us today! You will
