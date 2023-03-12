@@ -6,36 +6,50 @@
 	padding: 10vw;
 	overflow: hidden;
 	.inner {
-		> h1 {
-			font: bold 30px/1 'inter';
-			margin-bottom: 20px;
-			color: white;
-		}
+		flex-wrap: wrap;
 		width: 1180px;
 		margin: 0 auto;
-	}
-
-	ul {
-		width: 100%;
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-content: center;
-		margin-top: 80px;
-		cursor: pointer;
-
-		li {
-			width: calc(100% / 5);
-			margin-right: 20px;
+		overflow: hidden;
+		height: auto;
+	}
+	.title {
+		width: 20%;
+		background: rgb(32, 32, 32);
+		padding: 20px;
+		> h1 {
+			font: bold 25px/1 'inter';
 			margin-bottom: 20px;
+			color: white;
+			height: 30%;
+		}
+		> h2 {
+			font: 15px/1 'roboto';
+			color: #999;
+			height: 70px;
+			margin-top: 50px;
+		}
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+	}
+	.frame {
+		width: 80%;
+		flex-shrink: 0;
+
+		overflow: hidden;
+		img {
+			width: calc(100% / 4);
+			height: 200px;
+			margin: 0;
+			padding: 0;
+
 			filter: grayscale(100);
 			&:hover {
 				filter: grayscale(0);
-			}
-			img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
+				transform: scale(1.01);
+				transition: 0.5s;
 			}
 		}
 	}
