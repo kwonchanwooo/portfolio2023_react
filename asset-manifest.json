@@ -1,18 +1,22 @@
 {
   "files": {
-    "main.css": "/portfolio2023_react/static/css/main.9be47e49.css",
-    "main.js": "/portfolio2023_react/static/js/main.1c794e6c.js",
+    "main.css": "/portfolio2023_react/static/css/main.63b032e4.css",
+    "main.js": "/portfolio2023_react/static/js/main.9ba6337f.js",
+    "static/media/contact.jpg": "/portfolio2023_react/static/media/contact.d90875aa83d20000323b.jpg",
+    "static/media/facil.jpg": "/portfolio2023_react/static/media/facil.42688ff4754295902cb0.jpg",
+    "static/media/about.jpg": "/portfolio2023_react/static/media/about.455a21f072154c08af31.jpg",
+    "static/media/join.jpg": "/portfolio2023_react/static/media/join.2a4e550146e2acca7b21.jpg",
     "static/media/IMG_0116.PNG": "/portfolio2023_react/static/media/IMG_0116.6d6f7de57627e09face6.PNG",
     "static/media/restaurant.jpg": "/portfolio2023_react/static/media/restaurant.7ce73b31332a64d01f96.jpg",
     "static/media/bar.jpg": "/portfolio2023_react/static/media/bar.79236009e319db6ba09c.jpg",
     "static/media/swim.jpg": "/portfolio2023_react/static/media/swim.9d1e3903a4a56ef56945.jpg",
     "static/media/banquet.jpg": "/portfolio2023_react/static/media/banquet.99576afe0415d0f1e561.jpg",
     "index.html": "/portfolio2023_react/index.html",
-    "main.9be47e49.css.map": "/portfolio2023_react/static/css/main.9be47e49.css.map",
-    "main.1c794e6c.js.map": "/portfolio2023_react/static/js/main.1c794e6c.js.map"
+    "main.63b032e4.css.map": "/portfolio2023_react/static/css/main.63b032e4.css.map",
+    "main.9ba6337f.js.map": "/portfolio2023_react/static/js/main.9ba6337f.js.map"
   },
   "entrypoints": [
-    "static/css/main.9be47e49.css",
-    "static/js/main.1c794e6c.js"
+    "static/css/main.63b032e4.css",
+    "static/js/main.9ba6337f.js"
   ]
 }
