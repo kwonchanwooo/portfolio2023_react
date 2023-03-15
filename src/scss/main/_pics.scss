@@ -5,6 +5,7 @@
 	position: relative;
 	padding: 10vw;
 	overflow: hidden;
+
 	.inner {
 		flex-wrap: wrap;
 		width: 1180px;
@@ -12,6 +13,7 @@
 		display: flex;
 		overflow: hidden;
 		height: auto;
+		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 	}
 	.title {
 		width: 20%;
@@ -25,7 +27,8 @@
 		}
 		> h2 {
 			font: 15px/1 'roboto';
-			color: #999;
+			color: white;
+			opacity: 0.4;
 			height: 70px;
 			margin-top: 50px;
 		}

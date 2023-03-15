@@ -47,6 +47,7 @@
 				width: 580px;
 				height: 400px;
 				float: left;
+				box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 
 				.pic {
 					width: 500px;
@@ -56,7 +57,7 @@
 					transition: transform 0.2s ease-in-out;
 					filter: grayscale(100);
 					&:hover {
-						transform: scale(1.05);
+						transform: scale(1.01);
 						filter: grayscale(0);
 					}
 				}

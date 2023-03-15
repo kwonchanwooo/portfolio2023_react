@@ -21,6 +21,8 @@
 			width: 280px;
 			height: 300px;
 			background: rgb(29, 29, 29);
+			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+
 			&:hover {
 				@include button;
 			}
@@ -31,7 +33,8 @@
 				text-align: center;
 			}
 			p {
-				color: #aaa;
+				color: white;
+				opacity: 0.4;
 				font: 20px 'roboto';
 				margin-top: 60px;
 				text-align: center;

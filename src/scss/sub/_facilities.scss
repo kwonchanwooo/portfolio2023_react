@@ -34,7 +34,7 @@
 				width: 80px;
 				height: 28px;
 				border: none;
-				background: #555;
+				background: #333;
 				font: 12px/1 'arial';
 				color: #fff;
 				cursor: pointer;
@@ -52,8 +52,8 @@
 				width: 25%;
 				height: 50px;
 				border: none;
-				background: #555;
-				font: 25px/25px 'inter';
+				background: #333;
+				font: 15px/15px 'inter';
 				color: #fff;
 				cursor: pointer;
 				margin-right: 5px;
@@ -104,7 +104,7 @@
 				}
 
 				h2 {
-					font: normal 20px/1.2 'arial';
+					font: normal 15px/1.2 'arial';
 					color: white;
 					text-align: center;
 					margin-bottom: 30px;
@@ -118,11 +118,11 @@
 					align-items: center;
 					justify-content: flex-end;
 					img {
-						width: 30px;
+						width: 25px;
 					}
 					span {
 						cursor: pointer;
-						font-size: 12px;
+						font-size: 10px;
 						color: orange;
 						transition: color 0.5s;
 

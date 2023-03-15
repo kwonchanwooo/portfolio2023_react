@@ -9,6 +9,8 @@
 		background: rgb(29, 29, 29);
 		position: relative;
 		transform: translateY(-50%);
+		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+
 		.wrap {
 			padding: 50px 50px;
 			height: 300px;
@@ -17,19 +19,20 @@
 			flex-direction: column;
 			justify-content: center;
 			margin-left: 50px;
+
 			h1 {
 				font: bold 40px/50px 'inter';
 				width: 580px;
-				margin-bottom: 20px;
+				margin-bottom: 30px;
 				margin-top: 50px;
 				color: white;
 			}
 			p {
 				// padding: 10px;
-				color: #999;
+				color: white;
 				padding-bottom: 40px;
-				line-height: 30px;
-				opacity: 0.6;
+				line-height: 20px;
+				opacity: 0.4;
 				font-family: 'roboto';
 			}
 			a {

@@ -16,13 +16,15 @@
 				clear: both;
 			}
 			article {
+				box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+
 				width: 380px;
 				height: 140px;
 				background: rgb(29, 29, 29);
 				text-align: center;
 				padding-top: 35px;
 				> h1 {
-					font: bold 30px/1 'inter';
+					font: bold 25px/1 'inter';
 					color: rgb(207, 24, 41);
 					margin-bottom: 10px;
 					.fa-star {
@@ -32,9 +34,9 @@
 					}
 				}
 				h2 {
-					font: bold 15px/1 'roboto';
+					font: 15px/1 'roboto';
 					padding-top: 10px;
-					color: #999;
+					color: white;
 				}
 				&:nth-of-type(1) {
 					width: 380px;
@@ -44,7 +46,7 @@
 					margin-right: 20px;
 					text-align: center;
 					padding-top: 75px;
-
+					box-shadow: none;
 					> h1 {
 						font: bold 100px/1 'inter';
 						color: rgb(207, 24, 41);
@@ -59,7 +61,7 @@
 				&:nth-of-type(2) {
 					float: left;
 					h2 {
-						opacity: 0.6;
+						opacity: 0.5;
 					}
 					&:hover {
 						@include button;
@@ -77,7 +79,7 @@
 					float: right;
 					margin-bottom: 20px;
 					h2 {
-						opacity: 0.6;
+						opacity: 0.5;
 					}
 					&:hover {
 						@include button;
@@ -97,7 +99,7 @@
 					margin-right: 20px;
 					margin-top: 20px;
 					h2 {
-						opacity: 0.6;
+						opacity: 0.5;
 					}
 					&:hover {
 						@include button;
@@ -115,7 +117,7 @@
 				&:nth-of-type(5) {
 					float: left;
 					h2 {
-						opacity: 0.6;
+						opacity: 0.5;
 					}
 					&:hover {
 						@include button;

@@ -21,6 +21,8 @@
 				height: 390px;
 				float: left;
 				margin-right: 20px;
+				box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+
 				&:hover {
 					background: linear-gradient(90deg, rgb(126, 19, 26), rgb(196, 30, 40));
 					transform: translateY(-5px);
@@ -59,12 +61,12 @@
 					font-size: 40px;
 				}
 				> h1 {
-					font: bold 30px/1 'inter';
-					padding-top: 20px;
+					font: bold 25px/1 'inter';
+					padding-top: 40px;
 					color: white;
 				}
 				p {
-					font: 17px/20px 'roboto';
+					font: 15px/20px 'roboto';
 					display: block;
 					color: #999;
 					padding-top: 40px;
@@ -72,11 +74,11 @@
 					opacity: 0.6;
 				}
 				a {
-					font-size: 15px 'roboto';
+					font-size: 13px 'roboto';
 					@include red;
 
 					i {
-						font: 15px;
+						font: 13px;
 						@include red;
 					}
 				}

@@ -76,8 +76,7 @@ function Vids() {
 					}}
 					modules={[Autoplay, Pagination, Navigation]}
 					breakpoints={{
-						1180: {
-							width: 500,
+						1200: {
 							slidesPerView: 3,
 							spaceBetween: 50,
 						},

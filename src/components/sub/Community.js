@@ -1,12 +1,5 @@
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import {
-	faBus,
-	faCar,
-	faEnvelope,
-	faLocationDot,
-	faPhone,
-	faSubway,
-} from '@fortawesome/free-solid-svg-icons';
+import { faBus, faCar, faEnvelope, faLocationDot, faPhone, faSubway } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import Layout from '../commoon/Layout';
@@ -159,10 +152,9 @@ function Community() {
 			<div className='Location'>
 				<h1>Contact Us</h1>
 				<p>
-					Hello. This page introduces the hotel location. The hotel is situated in a convenient
-					location, with many attractions and shopping malls nearby. We also introduce you to the
-					transportation options that you can easily access from the hotel. If you want to know more
-					about the location, please check out the map below.
+					Hello. This page introduces the hotel location. The hotel is situated in a convenient location, with many attractions
+					and shopping malls nearby. We also introduce you to the transportation options that you can easily access from the
+					hotel. If you want to know more about the location, please check out the map below.
 				</p>
 
 				<div id='map' ref={container}></div>
@@ -201,11 +193,7 @@ function Community() {
 					{index === 0 ? <h2>서울 이태원점</h2> : <h2>대구 수성못점</h2>}
 					<div className='adr'>
 						<FontAwesomeIcon icon={faLocationDot} />
-						{index === 0 ? (
-							<p> 서울특별시 용산구 이태원1동 이태원로 179</p>
-						) : (
-							<p>대구광역시 수성구 용학로 106-7</p>
-						)}
+						{index === 0 ? <p> 서울특별시 용산구 이태원1동 이태원로 179</p> : <p>대구광역시 수성구 용학로 106-7</p>}
 					</div>
 					<div className='adr'>
 						<FontAwesomeIcon icon={faEnvelope} />
@@ -296,12 +284,7 @@ function Community() {
 									<div className='txt'>
 										<input type='text' defaultValue={post.title} ref={inputEdit} />
 										<br />
-										<textarea
-											cols='30'
-											rows='3'
-											defaultValue={post.content}
-											ref={textareaEdit}
-										></textarea>
+										<textarea cols='30' rows='3' defaultValue={post.content} ref={textareaEdit}></textarea>
 									</div>
 
 									<div className='btnSet'>
