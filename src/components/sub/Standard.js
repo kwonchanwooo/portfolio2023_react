@@ -10,7 +10,45 @@ function Standard(props) {
 	return (
 		<section id='roomInner' className='myScroll on'>
 			<section>
-				<div className='pic'>
+				<div className='room'>
+					<div className='pic'>
+						<img src={`${process.env.PUBLIC_URL}/img/standard/standard1.jpg`} />
+					</div>
+					<div className='text'>
+						<h1>
+							Choose Your <br />
+							luxurious room
+						</h1>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, accusantium numquam excepturi ratione dicta
+							nam cupiditate, labore reprehenderit, maiores obcaecati ducimus officiis rem eaque velit ad corrupti voluptatem
+							soluta exercitationem.
+							<div className='link'>
+								<button className='one'>HELLO</button>
+								<button className='two'>WORLD</button>
+							</div>
+						</p>
+					</div>
+				</div>
+				<div className='button'>
+					<nav>
+						<ul>
+							<li>Standard</li>
+							<li>Twin</li>
+							<li>Double</li>
+							<li>Suiet</li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+		</section>
+	);
+}
+
+export default memo(Standard);
+
+{
+	/* <div className='pic'>
 					<Swiper
 						effect={'coverflow'}
 						grabCursor={true}
@@ -46,23 +84,10 @@ function Standard(props) {
 					</Swiper>
 
 					<div className='desc'>
-						<div className='desctxt'>
-							<h1>Standard Room</h1>
-							<p>
-								Indulge in a comfortable stay in our well-appointed single standard room. With a
-								plush king-sized bed, flat-screen TV, and modern amenities, you'll enjoy a relaxing
-								and rejuvenating experience. The room also features breathtaking views of the city
-								or lush greenery, a mini-fridge to store your drinks and snacks, and an en-suite
-								bathroom with premium toiletries. Stay connected with complimentary Wi-Fi and
-								24-hour room service. Book now for an unforgettable stay.
-							</p>
-						</div>
-						<DescArticle />
-					</div>
-				</div>
-			</section>
-		</section>
-	);
+						<div className='desctxt'></div>
+						{/* <DescArticle /> */
 }
-
-export default memo(Standard);
+{
+	/* </div>
+				</div> */
+}

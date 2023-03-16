@@ -10,56 +10,47 @@ function Double(props) {
 	return (
 		<section id='roomInner' className='myScroll'>
 			<section>
-				<div className='pic'>
-					<Swiper
-						effect={'coverflow'}
-						grabCursor={true}
-						centeredSlides={true}
-						slidesPerView={'auto'}
-						loop={true}
-						coverflowEffect={{
-							rotate: 50,
-							stretch: 0,
-							depth: 100,
-							modifier: 1,
-							slideShadows: true,
-						}}
-						pagination={true}
-						modules={[EffectCoverflow, Pagination]}
-						className='mySwiper'
-					>
-						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/double/double1.jpg`} />
-						</SwiperSlide>
-						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/double/double2.jpg`} />
-						</SwiperSlide>
-						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/double/double3.jpg`} />
-						</SwiperSlide>
-						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/double/double4.jpg`} />
-						</SwiperSlide>
-						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/double/double5.jpg`} />
-						</SwiperSlide>
-						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/double/double5.jpg`} />
-						</SwiperSlide>
-					</Swiper>
-
-					<div className='desc'>
-						<div className='desctxt'>
-							<h1>Double Room</h1>
-							<p>
-								Designed with your comfort in mind, the room features a plush king-sized bed,
-								flat-screen TV, and a work desk. Enjoy stunning views of the city or lush greenery
-								from the room. Stay connected with complimentary Wi-Fi and make use of the
-								mini-fridge to store your drinks and snacks. The en-suite bathroom with premium
-								toiletries adds an extra touch of luxury to your stay.
-							</p>
+				<div className='three'>
+					<div className='threePics'>
+						<div className='firstpic'>
+							<img src={`${process.env.PUBLIC_URL}/img/suite/suite1.jpg`} />
 						</div>
-						<DescArticle />
+						<div className='secondpic'>
+							<div className='one'>
+								<img src={`${process.env.PUBLIC_URL}/img/suite/suite2.jpg`} />
+							</div>
+							<div className='two'>
+								<img src={`${process.env.PUBLIC_URL}/img/suite/suite3.jpg`} />
+							</div>
+						</div>
+					</div>
+					<div className='threeTxt'>
+						<h1>
+							The perfect luxury <br /> room for you
+						</h1>
+						<p>
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia quos mollitia deleniti soluta ipsa sequi dolore
+							rerum obcaecati eos cum.
+						</p>
+						<div className='fourbox'>
+							{' '}
+							<div className='box'>
+								<h2>10</h2>
+								<span>Lorem.</span>
+							</div>
+							<div className='box'>
+								<h2>10</h2>
+								<span>Lorem.</span>
+							</div>
+							<div className='box'>
+								<h2>10</h2>
+								<span>Lorem.</span>
+							</div>
+							<div className='box'>
+								<h2>10</h2>
+								<span>Lorem.</span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>

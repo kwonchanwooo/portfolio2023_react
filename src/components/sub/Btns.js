@@ -18,18 +18,15 @@ function Btns({ setScrolled, setPos }) {
 		const scroll = window.scrollY;
 		const base = -window.innerHeight / 3;
 		const secs = btnRef.current.parentElement.querySelectorAll('.myScroll');
-		const desc = btnRef.current.parentElement.querySelectorAll('.DescArticle');
 		setScrolled(scroll);
 
 		pos.current.forEach((pos, idx) => {
 			if (scroll >= pos + base) {
 				for (const btn of btns) btn.classList.remove('on');
 				for (const sec of secs) sec.classList.remove('on');
-				for (const des of desc) des.classList.remove('on');
 
 				btns[idx].classList.add('on');
 				secs[idx].classList.add('on');
-				desc[idx].classList.add('on');
 			}
 		});
 	}, [setScrolled]);
