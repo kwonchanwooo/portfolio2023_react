@@ -13,18 +13,15 @@ function News({ Scrolled, Pos }) {
 			},
 			{
 				title: 'Parking fee',
-				content:
-					'I am planning to rent a car during my stay. How much is the parking fee per day and where can I park?',
+				content: 'I am planning to rent a car during my stay. How much is the parking fee per day and where can I park?',
 			},
 			{
 				title: 'Room service',
-				content:
-					'I want to order some food and drinks to my room. Do you offer room service 24/7 and what is the menu?',
+				content: 'I want to order some food and drinks to my room. Do you offer room service 24/7 and what is the menu?',
 			},
 			{
 				title: 'Wi-Fi password',
-				content:
-					'I need to use the internet in my room. How can I get the Wi-Fi password and is it free of charge?',
+				content: 'I need to use the internet in my room. How can I get the Wi-Fi password and is it free of charge?',
 			},
 			{
 				title: 'Shuttle bus',
@@ -47,7 +44,7 @@ function News({ Scrolled, Pos }) {
 	return (
 		<section id='news'>
 			<div className='inner'>
-				<h1>NEWS</h1>
+				<h1>COMMUNITY</h1>
 
 				{Posts.map((post, idx) => {
 					if (idx >= 4) return null;

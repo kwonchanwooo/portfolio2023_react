@@ -13,7 +13,7 @@
 		h1 {
 			width: 100%;
 			color: white;
-			font-size: 30px;
+			font-size: 25px;
 			font-family: 'inter';
 		}
 		article {
@@ -22,20 +22,20 @@
 			height: 300px;
 			background: rgb(29, 29, 29);
 			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-
+			padding: 20px;
 			&:hover {
 				@include button;
 			}
 			h3 {
 				color: #fff;
 				margin-top: 50px;
-				font: bold 40px 'inter';
+				font: bold 25px 'inter';
 				text-align: center;
 			}
 			p {
 				color: white;
 				opacity: 0.4;
-				font: 20px 'roboto';
+				font: 15px 'roboto';
 				margin-top: 60px;
 				text-align: center;
 			}
