@@ -41,51 +41,51 @@ function RoomSecondTab({ scrolled, pos }) {
 						className='mySwiper'
 					>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/standard/standard2.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/standard/standard2.jpg`} alt={'standard방의 사진'} />
 							<div className='box'>
-								<p>hello</p>
+								<p>Blue Standard Room</p>
 							</div>
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/standard/standard3.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/standard/standard3.jpg`} alt={'standard방의 사진'} />
 							<div className='box'>
-								<p>hello</p>
+								<p>White Standard Room</p>
 							</div>
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/twin/twin4.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/twin/twin4.jpg`} alt={'Twin방의 사진'} />
 							<div className='box'>
-								<p>hello</p>
+								<p>White Twin Room</p>
 							</div>
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/twin/twin2.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/twin/twin2.jpg`} alt={'twin방의 사진'} />
 							<div className='box'>
-								<p>hello</p>
+								<p>Blue Twin room</p>
 							</div>
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/double/double3.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/double/double3.jpg`} alt={'double방의 사진'} />
 							<div className='box'>
-								<p>hello</p>
+								<p>Gray Double Room</p>
 							</div>
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/double/double4.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/double/double4.jpg`} alt={'double방의 사진'} />
 							<div className='box'>
-								<p>hello</p>
+								<p>Brown Double Room</p>
 							</div>
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/suite/suite3.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/suite/suite3.jpg`} alt={'suite방의 사진'} />
 							<div className='box'>
-								<p>hello</p>
+								<p>Gray Suite Room</p>
 							</div>
 						</SwiperSlide>{' '}
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/suite/suite4.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/suite/suite4.jpg`} alt={'suite방의 사진'} />
 							<div className='box'>
-								<p>hello</p>
+								<p>Red Suite Room</p>
 							</div>
 						</SwiperSlide>
 					</Swiper>
