@@ -7,15 +7,17 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import DescArticle from './DescArticle';
 
-function Twin({ scrolled, pos }) {
+function RoomSecondTab({ scrolled, pos }) {
 	return (
 		<section id='roomInner' className='myScroll'>
 			<section>
 				<div className='secondRoom'>
-					<h1>Hello world</h1>
+					<h2>Cozy Hotel</h2>
+					<h1>Room Suggest</h1>
 					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo vero aperiam dolores mollitia nostrum quo incidunt
-						doloribus inventore officia? A.
+						We have four categories of rooms to suit your needs and preferences: standard, double, twin and suite. You can browse
+						through the photos below to get a glimpse of what each room looks like. Whether you are traveling alone, with a
+						partner, with friends or with family, we have a room that will make you feel at home.
 					</p>
 				</div>
 				<div className='pics'>
@@ -39,7 +41,19 @@ function Twin({ scrolled, pos }) {
 						className='mySwiper'
 					>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/twin/twin1.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/standard/standard2.jpg`} />
+							<div className='box'>
+								<p>hello</p>
+							</div>
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src={`${process.env.PUBLIC_URL}/img/standard/standard3.jpg`} />
+							<div className='box'>
+								<p>hello</p>
+							</div>
+						</SwiperSlide>
+						<SwiperSlide>
+							<img src={`${process.env.PUBLIC_URL}/img/twin/twin4.jpg`} />
 							<div className='box'>
 								<p>hello</p>
 							</div>
@@ -51,47 +65,34 @@ function Twin({ scrolled, pos }) {
 							</div>
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/twin/twin3.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/double/double3.jpg`} />
 							<div className='box'>
 								<p>hello</p>
 							</div>
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/twin/twin4.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/double/double4.jpg`} />
 							<div className='box'>
 								<p>hello</p>
 							</div>
 						</SwiperSlide>
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/twin/twin4.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/suite/suite3.jpg`} />
 							<div className='box'>
 								<p>hello</p>
 							</div>
 						</SwiperSlide>{' '}
 						<SwiperSlide>
-							<img src={`${process.env.PUBLIC_URL}/img/twin/twin4.jpg`} />
+							<img src={`${process.env.PUBLIC_URL}/img/suite/suite4.jpg`} />
 							<div className='box'>
 								<p>hello</p>
 							</div>
 						</SwiperSlide>
 					</Swiper>
-
-					{/* <div className='desc'>
-						<div className='desctxt' style={{ opacity: `${scrolled / (pos - 1180)}` }}>
-							<h1>Twin Room</h1>
-							<p>
-								Unwind in style in our cozy twin room, featuring two comfortable twin-sized beds, flat-screen TV, and a work desk.
-								Take in beautiful views of the city or lush greenery from the room, and stay connected with complimentary Wi-Fi.
-								The mini-fridge is perfect for storing drinks and snacks, and the en-suite bathroom with premium toiletries offers
-								added comfort. Ideal for friends or family traveling together, book your stay now for a memorable experience.
-							</p>
-						</div>
-						<DescArticle />
-					</div> */}
 				</div>
 			</section>
 		</section>
 	);
 }
 
-export default memo(Twin);
+export default memo(RoomSecondTab);

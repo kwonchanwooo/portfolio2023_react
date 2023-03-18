@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import DescArticle from './DescArticle';
 
-function Double(props) {
+function RoomThirdTab(props) {
 	return (
 		<section id='roomInner' className='myScroll'>
 			<section>
@@ -25,6 +25,7 @@ function Double(props) {
 						</div>
 					</div>
 					<div className='threeTxt'>
+						<h2>Cozy Hotel</h2>
 						<h1>
 							The perfect luxury <br /> room for you
 						</h1>
@@ -35,20 +36,20 @@ function Double(props) {
 						<div className='fourbox'>
 							{' '}
 							<div className='box'>
-								<h2>10</h2>
-								<span>Lorem.</span>
+								<h2>10+</h2>
+								<span>Restaurant</span>
 							</div>
 							<div className='box'>
-								<h2>10</h2>
-								<span>Lorem.</span>
+								<h2>109</h2>
+								<span>Rooms</span>
 							</div>
 							<div className='box'>
-								<h2>10</h2>
-								<span>Lorem.</span>
+								<h2>29</h2>
+								<span>GMY</span>
 							</div>
 							<div className='box'>
-								<h2>10</h2>
-								<span>Lorem.</span>
+								<h2>7</h2>
+								<span>BEACH</span>
 							</div>
 						</div>
 					</div>
@@ -58,4 +59,4 @@ function Double(props) {
 	);
 }
 
-export default memo(Double);
+export default memo(RoomThirdTab);

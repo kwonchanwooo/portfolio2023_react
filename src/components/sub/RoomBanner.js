@@ -1,25 +1,30 @@
 import React, { memo } from 'react';
+import { Link } from 'react-router-dom';
 import { EffectCoverflow, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import DescArticle from './DescArticle';
+import Join from './Join';
 
-function suite(props) {
+function RoomBanner(props) {
 	return (
 		<section id='roomInner' className='myScroll'>
 			<section>
 				<div className='bottombanner'>
 					<div className='txtbox'>
-						<h1>HEllO WORLD</h1>
+						<h2>Cozy Hotel</h2>
+						<h1>JOIN US</h1>
 						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, architecto incidunt sint soluta harum aut assumenda
-							autem delectus enim suscipit?
+							Join our hotel membership program today and enjoy exclusive benefits such as discounted rates, early check-ins, late
+							check-outs, and more. Sign up now to start receiving these perks and enhance your hotel experience.
 						</p>
 					</div>
 					<div className='btnbox'>
-						<div className='gobutton'>GOGO</div>
+						<Link to='Join' className='gobutton'>
+							Join
+						</Link>
 					</div>
 				</div>
 			</section>
@@ -27,4 +32,4 @@ function suite(props) {
 	);
 }
 
-export default memo(suite);
+export default memo(RoomBanner);

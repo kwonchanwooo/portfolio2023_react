@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import Btns from './Btns';
-import Double from './Double';
-import Standard from './Standard';
-import Suite from './Suite';
-import Twin from './Twin';
+import RoomThirdTab from './RoomThirdTab';
+import RoomFirstTab from './RoomFirstTab';
+import RoomSecondTab from './RoomSecondTab';
+import RoomBanner from './RoomBanner';
 function Rooms(props) {
 	const [scrolled, setScrolled] = useState(0);
 	const [pos, setPos] = useState([]);
 	return (
 		<>
-			<Standard scrolled={scrolled} pos={pos[1]} />
-			<Twin scrolled={scrolled} pos={pos[2]} />
-			<Double scrolled={scrolled} pos={pos[3]} />
-			<Suite scrolled={scrolled} pos={pos[4]} />
+			<RoomFirstTab scrolled={scrolled} pos={pos[1]} />
+			<RoomSecondTab scrolled={scrolled} pos={pos[2]} />
+			<RoomThirdTab scrolled={scrolled} pos={pos[3]} />
+			<RoomBanner scrolled={scrolled} pos={pos[4]} />
 			<Btns setScrolled={setScrolled} setPos={setPos} />
 		</>
 	);

@@ -85,7 +85,17 @@
 			width: calc(100% / 3);
 			padding: 10px;
 			float: left;
-
+			&:hover {
+				transform: translateY(-5px);
+				transition: 0.5s;
+				.inner {
+					.pic {
+						img {
+							filter: grayscale(0);
+						}
+					}
+				}
+			}
 			.inner {
 				width: 100%;
 				background: rgb(16, 16, 16);
@@ -100,6 +110,8 @@
 
 					img {
 						width: 100%;
+						filter: grayscale(100%);
+						transition: 0.3s;
 					}
 				}
 
