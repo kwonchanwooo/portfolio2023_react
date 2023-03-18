@@ -197,7 +197,7 @@ function Community() {
 					</div>
 					<div className='adr'>
 						<FontAwesomeIcon icon={faEnvelope} />
-						{index === 0 ? <p> cozyitaewon@abcde.net</p> : <p> cozysuseongmot@cdefg.com</p>}
+						{index === 0 ? <p> cozyitw@abcde.net</p> : <p> cozyssm@cdefg.com</p>}
 					</div>{' '}
 					<div className='adr'>
 						<FontAwesomeIcon icon={faPhone} />

@@ -241,3 +241,73 @@
 		}
 	}
 }
+@media screen and (max-width: $tablet) {
+	.Contact {
+		> .inner {
+			.box {
+				.inputBox {
+					width: 50%;
+					padding: 30px;
+
+					.btnSet {
+						width: 100%;
+						button {
+							width: 45%;
+							margin-right: 5%;
+						}
+					}
+				}
+				.way {
+					width: 50%;
+				}
+			}
+			.showBox {
+				padding-top: 80px;
+				padding-bottom: 50px;
+				article {
+					width: calc((100% / 2.1));
+					margin-bottom: 40px;
+					margin-top: 0px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.Contact {
+		> .inner {
+			.box {
+				flex-direction: column-reverse;
+				.inputBox {
+					width: 100%;
+					padding: 0px;
+					margin-right: 0%;
+					margin-left: 0%;
+					border-top: 1px solid #999;
+					padding-top: 40px;
+
+					.btnSet {
+						width: 100%;
+						button {
+							width: 48%;
+							margin-right: 2%;
+						}
+					}
+				}
+				.way {
+					width: 100%;
+				}
+			}
+			.showBox {
+				padding-top: 80px;
+				padding-bottom: 50px;
+				article {
+					width: 100%;
+					margin-bottom: 40px;
+					margin-top: 0px;
+				}
+			}
+		}
+	}
+}

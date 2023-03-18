@@ -9,7 +9,7 @@ import About from './components/sub/About';
 import Community from './components/sub/Community';
 import Facilities from './components/sub/Facilities';
 import Join from './components/sub/Join';
-import Location from './components/sub/Location';
+
 import Rooms from './components/sub/Rooms';
 import Video from './components/sub/Video';
 import { fetchFlickr } from './redux/flickerSlice';
@@ -43,10 +43,10 @@ function App() {
 			<Route path='/video'>
 				<Video />
 			</Route>
-
+			{/* 
 			<Route path='/location'>
 				<Location />
-			</Route>
+			</Route> */}
 
 			<Route path='/rooms'>
 				<Rooms />

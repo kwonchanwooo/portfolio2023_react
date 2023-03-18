@@ -83,40 +83,23 @@
 }
 
 @media screen and (max-width: 1179px) {
-	.location {
-		.sub_visual {
-			height: 300px;
+	.Location {
+		padding: 0 0px;
+		> p {
+			width: 70%;
 		}
-		.inner {
-			width: 100%;
-			padding: 20px 20px;
+		nav {
+			position: relative;
+			top: 0;
+			margin-top: 20px;
 		}
 	}
 }
 
 @media screen and (max-width: 539px) {
-	.location {
-		// height: 1300px;
-		.sub_visual {
-			height: 200px;
-		}
-		.inner {
-			.wrap {
-				.chain {
-					width: 100%;
-					display: flex;
-					justify-content: space-between;
-					li {
-						width: 48%;
-
-						a {
-							width: 100%;
-							margin-top: 0;
-							margin-right: 0;
-						}
-					}
-				}
-			}
+	.Location {
+		nav {
+			position: relative;
 		}
 	}
 }
