@@ -28,7 +28,10 @@ $mobile: 539px;
 @import './sub/location';
 @import './sub/join';
 @import './sub/video';
-@import './sub/rooms';
-@import './sub/roomsInner';
+@import './sub/RoomFirstTab';
+@import './sub/RoomSecondTab';
+@import './sub/RoomThirdTab';
+@import './sub/RoomBanner';
+
+// @import './sub/roomsInner';
 @import './sub/btns';
-@import './sub/descArticle';

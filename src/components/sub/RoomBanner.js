@@ -10,7 +10,7 @@ import Join from './Join';
 
 function RoomBanner(props) {
 	return (
-		<section id='roomInner' className='myScroll'>
+		<section id='roomBanner' className='myScroll'>
 			<section>
 				<div className='bottombanner'>
 					<div className='txtbox'>

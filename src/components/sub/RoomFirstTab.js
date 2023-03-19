@@ -22,7 +22,7 @@ function RoomFirstTab(props) {
 		setActiveButton(index);
 	};
 	return (
-		<section id='roomInner' className='myScroll on'>
+		<section id='roomFirst' className='myScroll on'>
 			<section>
 				<div className='room'>
 					<div className='pic'>

@@ -9,7 +9,7 @@ import DescArticle from './DescArticle';
 
 function RoomSecondTab({ scrolled, pos }) {
 	return (
-		<section id='roomInner' className='myScroll'>
+		<section id='roomSecond' className='myScroll'>
 			<section>
 				<div className='secondRoom'>
 					<h2>Cozy Hotel</h2>

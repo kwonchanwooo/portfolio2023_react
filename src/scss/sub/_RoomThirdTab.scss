@@ -1,0 +1,169 @@
+:root {
+	--swiper-theme-color: rgb(207, 24, 41);
+}
+
+#roomThird {
+	overflow: hidden;
+	section {
+		background: rgb(29, 29, 29);
+		width: 100%;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 1200px;
+		padding-top: 200px;
+		.three {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			padding: 0 5%;
+			.threePics {
+				width: 50%;
+
+				// height: 900px;
+
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				.firstpic {
+					width: 50%;
+					// height: 450px;
+					margin-right: 20px;
+
+					&:hover {
+						transform: translateY(-5px);
+						transition: 0.5s;
+					}
+					img {
+						width: 100%;
+						// height: 100%;
+						box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+						object-fit: cover;
+					}
+				}
+				.secondpic {
+					width: 50%;
+					display: flex;
+					flex-direction: column;
+					box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+					.one {
+						height: 450px;
+						margin-bottom: 20px;
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							&:hover {
+								transform: translateY(-5px);
+								transition: 0.5s;
+							}
+						}
+					}
+					.two {
+						height: 450px;
+						box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							&:hover {
+								transform: translateY(-5px);
+								transition: 0.5s;
+							}
+						}
+					}
+				}
+			}
+			.threeTxt {
+				width: 50%;
+
+				background: transparent;
+				color: white;
+				padding: 50px;
+				> h2 {
+					font: nomral 17px/1 'roboto';
+					@include red;
+					position: absolute;
+					top: 200px;
+					opacity: 0.7;
+				}
+				h1 {
+					color: white;
+					font: bold 50px/60px 'roboto';
+					margin-bottom: 40px;
+					letter-spacing: 2px;
+				}
+				p {
+					margin-top: 80px;
+					color: white;
+					opacity: 0.4;
+					font: 17px/1.5 'inter';
+					margin-bottom: 80px;
+				}
+				.fourbox {
+					.box {
+						display: flex;
+						flex-direction: column;
+						background: rgb(34, 34, 34);
+						justify-content: center;
+						margin-right: 3%;
+						float: left;
+						width: 47%;
+						height: 200px;
+						margin-bottom: 3%;
+						padding: 40px;
+						box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+						&:hover {
+							@include button;
+							transform: translateY(-3px);
+							transition: 0.3s;
+						}
+						&:nth-of-type(even) {
+							margin-left: 0;
+						}
+						h2 {
+							font: bold 35px/1 'inter';
+							margin-bottom: 20px;
+						}
+						span {
+							font: nomral 15px/1 'roboto';
+							opacity: 0.6;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: $tablet) {
+	#roomThird {
+		section {
+			width: 100%;
+			.three {
+				width: 100%;
+				padding: 0 40px;
+				display: auto;
+				.threePics {
+					display: none;
+					width: 100%;
+					.secondpic {
+					}
+				}
+				.threeTxt {
+					width: 100%;
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	#roomThird {
+		section {
+		}
+	}
+}
