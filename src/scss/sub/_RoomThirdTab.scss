@@ -40,21 +40,29 @@
 						// height: 100%;
 						box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 						object-fit: cover;
+						opacity: 0;
+						transform: translateX(-100px);
+						transition-duration: 0.5s;
 					}
 				}
 				.secondpic {
 					width: 50%;
 					display: flex;
 					flex-direction: column;
-					box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 
 					.one {
 						height: 450px;
 						margin-bottom: 20px;
+
 						img {
 							width: 100%;
 							height: 100%;
 							object-fit: cover;
+							opacity: 0;
+							transform: translateX(-100px);
+							transition-duration: 0.5s;
+							transition-delay: 0.5s;
+							box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 							&:hover {
 								transform: translateY(-5px);
 								transition: 0.5s;
@@ -63,12 +71,16 @@
 					}
 					.two {
 						height: 450px;
-						box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 
 						img {
 							width: 100%;
 							height: 100%;
 							object-fit: cover;
+							opacity: 0;
+							transform: translateX(-100px);
+							transition-duration: 0.5s;
+							transition-delay: 0.9s;
+							box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 							&:hover {
 								transform: translateY(-5px);
 								transition: 0.5s;
@@ -116,6 +128,14 @@
 						margin-bottom: 3%;
 						padding: 40px;
 						box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+						transform: rotateY(180deg) translateY(100px);
+						transition-duration: 0.5s;
+						opacity: 0;
+						@for $i from 1 through 4 {
+							&:nth-of-type(#{$i}) {
+								transition-delay: 0.2s * ($i - 1);
+							}
+						}
 						&:hover {
 							@include button;
 							transform: translateY(-3px);
@@ -132,6 +152,43 @@
 							font: nomral 15px/1 'roboto';
 							opacity: 0.6;
 						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#roomThird.on {
+	section {
+		.three {
+			.threePics {
+				.firstpic {
+					img {
+						opacity: 1;
+						transform: translateX(0);
+					}
+				}
+				.secondpic {
+					.one {
+						img {
+							opacity: 1;
+							transform: translateX(0);
+						}
+					}
+					.two {
+						img {
+							opacity: 1;
+							transform: translateX(0);
+						}
+					}
+				}
+			}
+			.threeTxt {
+				.fourbox {
+					.box {
+						opacity: 1;
+						transform: rotateY(0deg) translateY(0px);
 					}
 				}
 			}

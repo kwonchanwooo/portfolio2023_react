@@ -8,6 +8,13 @@
 		section {
 			.room {
 				opacity: 1;
+				transform: translateY(0%);
+			}
+			.button {
+				nav {
+					opacity: 1;
+					transform: translateY(0px);
+				}
 			}
 		}
 	}
@@ -29,6 +36,8 @@
 			flex-direction: row;
 			justify-content: center;
 			opacity: 0;
+			transform: translateY(100px);
+			transition-duration: 0.5s;
 			.pic {
 				width: 800px;
 				height: 100%;
@@ -119,11 +128,15 @@
 			margin: 0 auto;
 			display: flex;
 			justify-content: center;
+
 			nav {
 				position: absolute;
 				bottom: 150px;
 				box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-
+				opacity: 0;
+				transform: translateY(100px);
+				transition-duration: 0.5s;
+				transition-delay: 0.5s;
 				ul {
 					display: flex;
 					justify-content: center;

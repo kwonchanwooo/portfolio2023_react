@@ -12,8 +12,8 @@ function RoomSecondTab({ scrolled, pos }) {
 		<section id='roomSecond' className='myScroll'>
 			<section>
 				<div className='secondRoom'>
-					<h2>Cozy Hotel</h2>
-					<h1>Room Suggest</h1>
+					<h2 style={{ transform: `translateX(${scrolled * 2 - pos}px)` }}>Cozy Hotel</h2>
+					<h1 style={{ transform: `translateX(${scrolled * 2 - pos}px)` }}>Room Suggest</h1>
 					<p>
 						We have four categories of rooms to suit your needs and preferences: standard, double, twin and suite. You can browse
 						through the photos below to get a glimpse of what each room looks like. Whether you are traveling alone, with a
@@ -25,16 +25,8 @@ function RoomSecondTab({ scrolled, pos }) {
 						effect={'coverflow'}
 						grabCursor={true}
 						centeredSlides={true}
-						// loop={true}
 						slidesPerView={'auto'}
 						spaceBetween={80}
-						// coverflowEffect={{
-						// 	rotate: 50,
-						// 	stretch: 0,
-						// 	depth: 50,
-						// 	modifier: 1,
-						// 	slideShadows: true,
-						// }}
 						navigation={true}
 						pagination={true}
 						modules={[]}

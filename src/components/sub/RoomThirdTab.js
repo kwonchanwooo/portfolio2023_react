@@ -6,9 +6,9 @@ import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import DescArticle from './DescArticle';
 
-function RoomThirdTab(props) {
+function RoomThirdTab(scrolled, pos) {
 	return (
-		<section id='roomInner' className='myScroll'>
+		<section id='roomThird' className='myScroll'>
 			<section>
 				<div className='three'>
 					<div className='threePics'>
