@@ -11,7 +11,7 @@ import Facilities from './components/sub/Facilities';
 import Join from './components/sub/Join';
 
 import Rooms from './components/sub/Rooms';
-import Video from './components/sub/Video';
+// import Video from './components/sub/Video';
 import { fetchFlickr } from './redux/flickerSlice';
 import { fetchVideo } from './redux/videoSlice';
 import './scss/style.scss';
@@ -40,12 +40,8 @@ function App() {
 				<About />
 			</Route>
 
-			<Route path='/video'>
+			{/* <Route path='/video'>
 				<Video />
-			</Route>
-			{/* 
-			<Route path='/location'>
-				<Location />
 			</Route> */}
 
 			<Route path='/rooms'>

@@ -5,7 +5,6 @@ import { EffectCoverflow, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import DescArticle from './DescArticle';
 
 function RoomSecondTab({ scrolled, pos }) {
 	return (

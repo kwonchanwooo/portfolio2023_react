@@ -4,7 +4,6 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import DescArticle from './DescArticle';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Community from './Community';

@@ -4,7 +4,6 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import DescArticle from './DescArticle';
 
 function RoomThirdTab(scrolled, pos) {
 	return (
